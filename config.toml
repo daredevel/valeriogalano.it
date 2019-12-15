@@ -1,0 +1,47 @@
+baseurl = "http://example.org/"
+title = "Valerio Galano - Software developer"
+theme = "hugo-theme-nix"
+languageCode = "it-it"
+disqusShortname = "your_disqus_shortname"
+
+[menu]
+#  [[menu.header]]
+#    name = "/post"
+#    weight = 0
+#    url = "/post"
+  [[menu.header]]
+    name = "pensieriInCodice-podcast"
+    weight = 1
+    url = "https://pensieriincodice.it/"
+  [[menu.header]]
+    name = "daredevel-blog"
+    weight = 2
+    url = "https://daredevel.com/"
+#  [[menu.header]]
+#    name = "about"
+#    weight = 1
+#    url = "/about"
+#  [[menu.header]]
+#    parent = "/post"
+#    name = "categories"
+#    url = "/categories"
+#  [[menu.header]]
+#    parent = "/post"
+#    name = "tags"
+#    url = "/tags"
+
+[params]
+  GithubID = "daredevel"
+  TwitterID = "valeriogalano"
+  LinkedInID = "valeriogalano"
+  FacebookID = "valerio.galano"
+  TelegramID = "daredevel"
+  InstagramID = "valeriogalano"
+  Name = "Valerio Galano"
+  HeaderUsername = "valerio"
+  HeaderHostname = "daredevel"
+  Email = "v.galano@daredevel.com"
+  About = "Prometto che al più presto mi fermerò un attimo e mi prenderò qualche minuto per pensare ad una descrizione da mettere in questo box. Nel fattempo, in alto tovi i collegamenti al mio blog e al mio podcast. Buon divertimento!"
+  ProfilePicture = "/profile.jpg"
+  Favicon = "/favicon.ico"
+  Mobile = "+393803529774"
