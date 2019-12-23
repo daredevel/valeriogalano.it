@@ -24,14 +24,10 @@ Una situazione del genere potrebbe potenzialmente rappresentare la fine di quals
 
 In Europa, le norme sono differenti, ma il timore è che la scelta della FCC possa avere ripercussioni anche nel Vecchio Continente. Un esempio di cosa potrebbe diventare Internet senza il principio della neutralità è rappresentato dal provider <a href="http://www.lastampa.it/2017/11/20/tecnologia/news/spagna-e-portogallo-mostrano-com-internet-senza-la-net-neutrality-9w8g0wDWA02WqYx2JOPkfP/pagina.html" rel="noreferrer noopener" target="_blank">MEO in Portogallo e Vodafone in Spagna</a>. Nell’immagine che segue, (presa dall’articolo al precedente link) vengono mostrate le tariffe MEO per l’acquisto di traffico per specifiche applicazioni. Badate bene: MEO non vende pacchetti di traffico per una tipologia di servizio (messaging, social network o video) come accade ad esempio con Vodafone Italia, ma proprio per determinati servizi (Facebook, Instagram, WhatsApp, ecc.).
 
-![1]
-
-Screenshot del sito di [MEO](https://www.meo.pt/internet/internet-movel/telemovel/pacotes-com-telemovel) (su [archive.is](http://archive.is/K91Sg))
+{{< figure src="https://cdn-images-1.medium.com/max/800/1*NUhHLYsJFwwTRFhv-DkFgw.jpeg" caption="Screenshot del sito di [MEO](https://www.meo.pt/internet/internet-movel/telemovel/pacotes-com-telemovel) (su [archive.is](http://archive.is/K91Sg))" >}}
 
 Infine, c’è un’ulteriore questione da tenere in considerazione: in Italia, come tutti ben sappiamo, la copertura dei vari provider non è uguale su tutto il territorio nazionale: ci sono zone in cui alcuni provider non sono addirittura presenti. Cosa accadrebbe se il servizio di cui vogliamo usufruire fosse privilegiato da un provider a cui non possiamo abbonarci e fosse invece ostracizzato da tutti gli altri? Non ci resterebbe che rinunciarvi.
 
 Supponiamo, ad esempio, che FastWeb stipulasse un contratto con Netflix e Telecom facesse lo stesso con Infinity. Se a casa vostra non ci fosse la possibilità di attivare una linea FastWeb? Dovreste rinunciare a Netflix e potreste vedere solo Infinity.
 
 Personalmente, io vorrei essere libero di scegliere quali servizi utilizzare. E voi?
-
- [1]: https://cdn-images-1.medium.com/max/800/1*NUhHLYsJFwwTRFhv-DkFgw.jpeg

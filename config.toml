@@ -3,6 +3,7 @@ title = "Valerio Galano - Software developer"
 theme = "hugo-theme-nix"
 languageCode = "it-it"
 #disqusShortname = "your_disqus_shortname"
+pygmentsUseClasses=true
 
 [menu]
   [[menu.header]]
