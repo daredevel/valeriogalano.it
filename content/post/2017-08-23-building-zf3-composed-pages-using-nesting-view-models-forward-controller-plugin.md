@@ -110,7 +110,7 @@ At this point, in view template, a variable correspondent to children name will 
 
 **module/Application/view/application/index/index.phtml**
 
-{{< highlight html "linenos=table" >}}
+{{< highlight html "linenos=true" >}}
 <div class="jumbotron">
     <h1>Welcome to <span class="zf-green">Zend Framework</span></h1>
 
@@ -190,7 +190,7 @@ At this point, in view template, a variable correspondent to children name will 
 
 {{< /highlight >}}
 
-Result of this rendering (still available at http://<server>:<port>/) will be the same as in **Fig.2**.
+Result of this rendering (still available at http://&lt;server&gt;:&lt;port&gt;/) will be the same as in **Fig.2**.
 
  [1]: https://docs.zendframework.com/zend-mvc/plugins/#forward-plugin
  [2]: https://docs.zendframework.com/zend-view/quick-start/#nesting-view-models
