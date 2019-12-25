@@ -17,7 +17,7 @@ categories:
   - Tutorials
 
 ---
-Zend Service Manager component is Zend Framework&#8217;s implementation of [service locator pattern][1]. This object is very usefull component for an application and is largely used in ZF applications.
+Zend Service Manager component is Zend Framework's implementation of [service locator pattern][1]. This object is very usefull component for an application and is largely used in ZF applications.
 
 Unfortunately in ZF3 default application, Service Manager component is [no more available in controllers][2].
 
@@ -52,7 +52,7 @@ class AbstractController extends AbstractActionController
      */
     public function getServiceManager()
     {
-        return $this-&gt;serviceManager;
+        return $this->serviceManager;
     }
 
     /**
@@ -61,7 +61,7 @@ class AbstractController extends AbstractActionController
      */
     public function setServiceManager($serviceManager)
     {
-        $this-&gt;serviceManager = $serviceManager;
+        $this->serviceManager = $serviceManager;
         return $this;
     }
 }
@@ -87,7 +87,7 @@ class ControllerFactory implements FactoryInterface
     {
         $service = (null === $options) ? new $requestedName : new $requestedName($options);
 
-        return $service-&gt;setServiceManager($container);
+        return $service->setServiceManager($container);
     }
 }
 
@@ -107,7 +107,7 @@ class IndexController extends AbstractController
 
     public function indexAction()
     {
-        $dummy = $this-&gt;getServiceManager()-&gt;get('dummy');
+        $dummy = $this->getServiceManager()->get('dummy');
 
         return new ViewModel();
     }
@@ -123,10 +123,10 @@ Finally to make everithing work, we have to instantiate controller in a bit diff
 
 'controllers' => [
     'factories' => [
-        \Application\Controller\IndexController::class =&gt; \Application\Controller\ControllerFactory::class,
+        \Application\Controller\IndexController::class => \Application\Controller\ControllerFactory::class,
     ],
     'aliases' => [
-        'Application\Controller\Index' =&gt; \Application\Controller\IndexController::class,
+        'Application\Controller\Index' => \Application\Controller\IndexController::class,
     ],
 
 ],

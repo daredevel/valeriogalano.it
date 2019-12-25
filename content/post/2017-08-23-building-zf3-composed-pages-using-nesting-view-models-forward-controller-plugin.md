@@ -37,11 +37,11 @@ In this way, we will point to a main page and its controller will have to invoke
 
 To achieve this goal, we can use a combination of [Forward Controller Plugin][1] and [Nesting View Models][2] practice (both from official ZF3 documentation).
 
-As usual, let’s assume we just have a working <a href="https://docs.zendframework.com/tutorials/getting-started/skeleton-application/" target="_blank" rel="noopener noreferrer">Skeleton ZF3 Application</a>. By connecting to index route (http://<server>:<port>/), we will see:
+As usual, let’s assume we just have a working [Skeleton ZF3 Application][3]. By connecting to index route (http://<server>:<port>/), we will see:
 
 {{< figure src="/addChild-default-index-action.png" title="Fig.3: Default ZF3 Skeleton Application home page." >}}
 
-The first thing we have to do is to create an action to include into main page. We will implement exactly _Example action_ shown in Fig.1. So, let&#8217;s add following method into IndexController:
+The first thing we have to do is to create an action to include into main page. We will implement exactly _Example action_ shown in Fig.1. So, let's add following method into IndexController:
 
 **module/Application/src/Controller/IndexController.php**
 
@@ -58,7 +58,7 @@ class IndexController extends AbstractActionController
 }
 {{< /highlight >}}
 
-This action also need a view to render, so let&#8217;s create following template:
+This action also need a view to render, so let's create following template:
 
 **module/Application/view/application/index/to-include.phtml**
 
@@ -190,7 +190,8 @@ At this point, in view template, a variable correspondent to children name will 
 
 {{< /highlight >}}
 
-Result of this rendering (still available at http://&lt;server&gt;:&lt;port&gt;/) will be the same as in **Fig.2**.
+Result of this rendering (still available at http://<server>:<port>/) will be the same as in **Fig.2**.
 
  [1]: https://docs.zendframework.com/zend-mvc/plugins/#forward-plugin
  [2]: https://docs.zendframework.com/zend-view/quick-start/#nesting-view-models
+ [3]: https://docs.zendframework.com/tutorials/getting-started/skeleton-application/

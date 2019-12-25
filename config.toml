@@ -3,7 +3,7 @@ title = "Valerio Galano - Software developer"
 #theme = "ananke"
 theme = "hugo-theme-nix"
 languageCode = "it-it"
-#disqusShortname = "your_disqus_shortname"
+#disqusShortname = "daredevel"
 pygmentsUseClasses=true
 
 [menu]
@@ -95,3 +95,26 @@ pygmentsUseClasses=true
     endLevel = 3
     ordered = false
     startLevel = 2
+
+[privacy]
+  [privacy.disqus]
+    disable = false
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    disable = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.instagram]
+    disable = true
+    simple = true
+  [privacy.twitter]
+    disable = false
+    enableDNT = true
+    simple = true
+    disableInlineCSS = true
+  [privacy.vimeo]
+    disable = true
+    simple = true
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true
