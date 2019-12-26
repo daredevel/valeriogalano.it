@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Valerio Galano - Software developer</title>
+    <link>https://valeriogalano.it/</link>
+    <description>Recent content on Valerio Galano - Software developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>it-it</language>
+    <lastBuildDate>Sat, 09 Dec 2017 10:00:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://valeriogalano.it/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Perché la Net Neutrality ci riguarda tutti?</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/perche-la-net-neutrality-ci-riguarda-tutti/</link>
+      <pubDate>Sat, 09 Dec 2017 10:00:05 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/perche-la-net-neutrality-ci-riguarda-tutti/</guid>
+      <description>Il prossimo 14 Dicembre la U.S. Federal Communications Commission, ente che regolamenta il traffico Internet negli Stati Uniti, deciderà se abolire o meno il principio della Neutralità della rete (conosciuto come Net Neutrality). La decisione non riguarda solo la regolamentazione negli USA ma, ovviamente, le ripercussioni saranno di livello globale.
+In parole estremamente semplici, la Net Neutrality è quella norma che impedisce ai provider di servizi Internet di penalizzare o favorire il traffico generato da un determinato fornitore di servizi.</description>
+    </item>
+    
+    <item>
+      <title>La responsabilità di dire “No”</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/la-responsabilita-di-dire-no/</link>
+      <pubDate>Tue, 28 Nov 2017 10:00:14 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/la-responsabilita-di-dire-no/</guid>
+      <description>Lo scorso 4 novembre, durante la ScotlandPHP Conference 2017, ho avuto il piacere di assistere ad un inspirato intervento di Adam Culp sul tema dello sviluppo di codice pulito. Ho trovato tale intervento particolarmente interessante perché, se pur ribadendo concetti che tutti gli addetti ai lavori conoscono (o dovrebbero conoscere), Adam ha voluto porre l’accento sull’aspetto professionale della questione e sulle responsabilità dei soggetti coinvolti.
+L’idea che molti hanno dello sviluppo software (talvolta anche in ambienti professionali) è che il lavoro consista semplicemente nella scrittura, nel minor tempo possibile, di codice privo di errori di sintassi e che restituisca l’output desiderato.</description>
+    </item>
+    
+    <item>
+      <title>Building ZF3 composed pages using Nesting View Models and Forward Controller Plugin</title>
+      <link>https://valeriogalano.it/php/building-zf3-composed-pages-using-nesting-view-models-forward-controller-plugin/</link>
+      <pubDate>Wed, 23 Aug 2017 09:20:31 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/php/building-zf3-composed-pages-using-nesting-view-models-forward-controller-plugin/</guid>
+      <description>Normally in ZF3 MVC projects, each controller action matches one view and use it to render its output.
+Occasionally, we may want to build your ZF3 pages by dispatching various controllers from within the matched controller and merging outputs into a unique final view. In this way we can aggregate one or more views to create complex pages like report summaries or widget dashboards.
+In this post, we will see how to write few lines of code to include output of an arbitrary action into action matched from route.</description>
+    </item>
+    
+    <item>
+      <title>How to inject Zend Service Manager in ZF3 Controllers</title>
+      <link>https://valeriogalano.it/php/to-inject-zend-service-manager-zf3-controllers/</link>
+      <pubDate>Wed, 07 Jun 2017 09:00:30 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/php/to-inject-zend-service-manager-zf3-controllers/</guid>
+      <description>Zend Service Manager component is Zend Framework&#39;s implementation of service locator pattern. This object is very usefull component for an application and is largely used in ZF applications.
+Unfortunately in ZF3 default application, Service Manager component is no more available in controllers.
+An official solution exsists for this, but in this little tutorial, I want to share an easy solution to inject Service Manager in all controllers.
+To implement this solution, we will write our controllers by extending an abstract controller class written to handle a Service Manager instance.</description>
+    </item>
+    
+    <item>
+      <title>Le fake news fanno danni. Lo vogliamo capire?!</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/le-fake-news-fanno-danni-lo-vogliamo-capire/</link>
+      <pubDate>Tue, 30 May 2017 08:20:25 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/le-fake-news-fanno-danni-lo-vogliamo-capire/</guid>
+      <description>Ne abbiamo già parlato qualche settimana fa nell&#39;articolo Notizie false, conseguenze vere, ma la situazione continua a peggiorare.
+A nulla sembrano servire gli sforzi di Google, Facebook, dei siti anti bufala e dei vari debunker. Le fake news dilagano e sono sempre più pericolose e dannose.
+Bugie divulgate in maniera intenzionale da personaggi il cui scopo è fomentare l&#39;odio verso qualcuno.
+Ne sono dimostrazione il caso di Alfredo Mascheroni, la cui vita è stata devastata dalla falsa accusa pubblica (su Facebook) di essere un pedofilo o del bar di Pioltello, i cui avventori sarebbero stati visti da un testimone, festeggiare per l&#39;attentato a Munchester.</description>
+    </item>
+    
+    <item>
+      <title>WannaCry: attacco globale e diffusa superficialità</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/wannacry-attacco-globale-diffusa-superficialita/</link>
+      <pubDate>Mon, 29 May 2017 10:00:27 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/wannacry-attacco-globale-diffusa-superficialita/</guid>
+      <description>Sono trascorse ormai quasi 3 settimane da quando il ransomware chiamato WannaCry ha iniziato la propria diffusione scatenando il panico e causando danni a livello mondiale.
+Cos&#39;è un ransomware? Il concetto di ransomware non è di certo una novità. Al contratrio, il primo caso documentato di infezione informatica di questo tipo risale addirittura al 1989. Io stesso, durante lo scorso anno, ho avuto a che fare in varie occasioni con aziende colpite da CryptoLocker, una delle più diffuse varianti di questo tipo di malware.</description>
+    </item>
+    
+    <item>
+      <title>Notizie false, conseguenze vere</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/notizie-false-conseguenze-vere/</link>
+      <pubDate>Wed, 03 May 2017 09:00:09 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/notizie-false-conseguenze-vere/</guid>
+      <description>Le Fake News non sono certo una novità degli ultimi tempi, esistono da molto prima dei social network, degli smartphone e di Internet.
+Bufale, disinformazione, propaganda e post-verità (i termini sono moderni ma i concetti che rappresentano non lo sono affatto) sono sempre state utlizzate da determinati soggetti per convincere altri soggetti a dire o fare cose: votare Tizio al posto di Caio, odiare una particolare etnia, acquistare un determinato prodotto, ecc.</description>
+    </item>
+    
+    <item>
+      <title>Clicca qui! Aiuta a salvare la vita di un gattino!</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/clicca-aiuta-salvare-la-vita-un-gattino/</link>
+      <pubDate>Sun, 30 Apr 2017 09:00:27 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/clicca-aiuta-salvare-la-vita-un-gattino/</guid>
+      <description>NO! NO! NO! e ancora NO! Non è con un click che si salva un gatto.
+Non è con una condivisione che si aiuta un bambino malato.
+Non è commentando &amp;ldquo;Amen&amp;rdquo; che si dimostra di amare Gesù.
+Non è con un like che si risolve il problema dell&#39;immigrazione.
+Quando nella vostra bacheca appare un post che vi incoraggia a commentare, condividere, mettere like al fine di dare il vostro personale contributo a costo zero ad una importante causa sociale o religiosa, provate a pensare a quanto segue:</description>
+    </item>
+    
+    <item>
+      <title>Google, Burger King, panini e privacy</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/google-burger-king-panini-privacy/</link>
+      <pubDate>Wed, 19 Apr 2017 09:00:42 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/google-burger-king-panini-privacy/</guid>
+      <description>Cosa posso avere mai in comune il gigante dei servizi online, Google, una delle più note catene di Fast Food, Burger King e la privacy delle nostre case?
+Apparentemente nulla, ma&amp;hellip;
+È di pochi giorni fa la notizia che Burger King abbia realizzato e mandato in onda negli Stati Uniti un particolare (ed innovativo) spot pubblicitario che ha destato una valanga di polemiche.
+In pratica, nello spot appare un impiegato di Burger King che mostrata un panino chiamato Whopper e dice qualcosa come:</description>
+    </item>
+    
+    <item>
+      <title>How to setup a Translate Controller Plugin in Zend Framework 3</title>
+      <link>https://valeriogalano.it/php/to-setup-translate-controller-plugin-zend-framework-3/</link>
+      <pubDate>Thu, 13 Apr 2017 17:10:59 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/php/to-setup-translate-controller-plugin-zend-framework-3/</guid>
+      <description>Sometimes in our Zend Framework 3 multi-language application, we could need to access to Zend Translator component directly from Controllers. For example, when we have to translate a string to return in a JsonModel.
+So, let&#39;s see how to write a very simple Controller Plugin that will help us to save a lot of code (and time).
+Following explanation will assume we just have at least a Skeleton ZF3 Application with working Zend Translator component.</description>
+    </item>
+    
+    <item>
+      <title>Perché Netflix ha abbandonato le stelle per i pollici</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/perche-netflix-abbandonato-le-stelle-pollici/</link>
+      <pubDate>Tue, 11 Apr 2017 10:04:59 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/perche-netflix-abbandonato-le-stelle-pollici/</guid>
+      <description>Il 05 Aprile la nota piattaforma di video streaming, Netflix, ha sostituito il propio sistema di votazione dei contenuti.
+D&#39;ora in poi, infatti, non sarà più possibile esprimere il nostro voto sottoforma di stelle: da 1 a 5 a seconda del gradimento. Il sistema permetterà, invece, la scelta tra un Mi piace o un Non mi piace rappresentati, rispettivamente, da un pollice in su e un pollice in giù.
+Per capire cosa spinge una grande piattaforma come Netflix a modificare in modo così radicale i propri meccanismi di interazione, occorre innanzitutto comprendere lo scopo per cui i voti vengono utilizzati.</description>
+    </item>
+    
+    <item>
+      <title>DuckDuckGo, il motore di ricerca che rispetta la tua privacy</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/duckduckgo-motore-ricerca-rispetta-la-tua-privacy/</link>
+      <pubDate>Wed, 05 Apr 2017 11:23:37 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/duckduckgo-motore-ricerca-rispetta-la-tua-privacy/</guid>
+      <description>Tutti abbiamo, almeno una volta nella vita, ricercato qualcosa su Google, su Bing o su qualche altro motore.
+Molti di noi, effettuano centinaia di ricerche ogni giorno che possono riguardare argomenti inerenti il nostro lavoro, i nostri hobby, delle curiosità che vogliamo soddisfare o delle necessità che abbiamo in quel momento.
+Quello che però in molti non sanno, o dimenticano spesso, è che questi grandi motori, in cambio del servizio offerto, raccolgono una enorme mole di informazioni sui propri utenti.</description>
+    </item>
+    
+    <item>
+      <title>Twitter vola sempre più basso</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/twitter-vola-sempre-piu-basso/</link>
+      <pubDate>Wed, 29 Mar 2017 09:11:29 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/twitter-vola-sempre-piu-basso/</guid>
+      <description>Non siamo di certo in un periodo d&#39;oro per il social network piumato che nonstante la lieve crescita degli ultimi mesi, soffre ancora di una serie di limitazioni intrinseche che lo rendono poco florido sotto il profilo economico.
+L&#39;azzurro volatile, infatti, soffre più o meno da sempre di uno scarso interesse da parte degli inserzionisti e questo, ovviamente, si traduce in un continuo declino dal punto di vista economico.
+  Andamento delle azioni di Twitter negli ultimi 5 anni</description>
+    </item>
+    
+    <item>
+      <title>Print multiple files in Linux</title>
+      <link>https://valeriogalano.it/tutorials/print-multiple-files-in-linux/</link>
+      <pubDate>Mon, 14 Dec 2015 13:31:02 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/print-multiple-files-in-linux/</guid>
+      <description>The problem Print many files in a single session is a common problem for people that works with big data set. Big documentation, Tax forms PDFs, lot&#39;s of images or photos, are all data that are often stored in separated files. When you need to print them, you have to open each file with specific reader and click on print button.
+The solution A solution to this problem, is to find and install special software that give you ability to select an print some files together.</description>
+    </item>
+    
+    <item>
+      <title>Testi fai da te per il tuo sito Web? Meglio di no.</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/testi-fai-da-te-per-il-tuo-sito-web-meglio-di-no/</link>
+      <pubDate>Fri, 21 Aug 2015 14:46:45 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/testi-fai-da-te-per-il-tuo-sito-web-meglio-di-no/</guid>
+      <description>C&#39;è contenuto e contenuto Quando si realizzano siti Web su commissione, capita spesso di imbattersi in clienti più intraprendenti di altri che desiderano prender parte attivamente al processo di sviluppo, ed in particolare a ciò che riguarda la creazione e pubblicazione di contenuti.
+Capita dunque che ti forniscano molto materiale come loghi, immagini, fotografie, testi ed altri elementi multimediali e pretendano che tu li mescoli in un grande calderone per tirarne magicamente fuori un sito interessante, mirato, bello ed armonioso.</description>
+    </item>
+    
+    <item>
+      <title>Accedere ad una VPN Cisco da Ubuntu utilizzando un file PCF</title>
+      <link>https://valeriogalano.it/tutorials/accedere-ad-vpn-cisco-ubuntu-utilizzando-file-pcf/</link>
+      <pubDate>Thu, 17 Apr 2014 10:41:55 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/accedere-ad-vpn-cisco-ubuntu-utilizzando-file-pcf/</guid>
+      <description>La Virtual Private Network (VPN) è un ottimo modo per accedere alle risorse del tuo ufficio da casa o da qualsiasi altra rete in sicurezza e la VPN Cisco è una delle più efficienti e robuste.
+Una VPN Cisco può essere configurata in due modi: utilizzando direttamente i dati di autenticazione oppure un file PCF.
+In questo articolo, vedremo come configurare una VPN Cisco utilizzando un file PFC su di un sistema Ubuntu.</description>
+    </item>
+    
+    <item>
+      <title>Arriva WordPress 3.9</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/arriva-wordpress-3-9/</link>
+      <pubDate>Mon, 14 Apr 2014 15:08:14 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/arriva-wordpress-3-9/</guid>
+      <description>E&amp;rsquo; previsto per questa settimana il rilascio della versione stabile di WordPress 3.9.
+Pur non essendo moltissime le novità introdotte, appare chiaro l&#39;impegno nell&#39;aggiornare componenti importati del CMS come preparazione per l&#39;introduzione di grandi novità.
+Aggiornato editor visuale (TinyMCE) e migliorata gestione media La novità sicuramente più interessante riguarda l&#39;aggiornamento di TinyMCE, l&#39;editor utilizzato dagli utenti per scrivere pagine e articoli. Oltre all&#39;aumento di performance e all&#39;aspetto più accattivanante, questo aggiornamento migliora notevolmente la gestione dei file multimediali, in special modo delle immagini.</description>
+    </item>
+    
+    <item>
+      <title>Connect to Cisco VPN from Ubuntu using PCF file</title>
+      <link>https://valeriogalano.it/tutorials/connect-to-cisco-vpn-from-ubuntu-using-pcf-file/</link>
+      <pubDate>Sun, 13 Apr 2014 11:03:29 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/connect-to-cisco-vpn-from-ubuntu-using-pcf-file/</guid>
+      <description>Virtual Private Network (VPN) is a great option to access to your office resources from home in secure way and Cisco VPN is one of more efficient and robust type of VPN.
+Cisco VPN configuration can be setup in 2 ways: using authentication data or PCF file.
+In this article, we will describe how to setup Cisco VPN using PCF on an Ubuntu system.
+First of all, we need vpnc client, so let&#39;s open a terminal and digit:</description>
+    </item>
+    
+    <item>
+      <title>Il fenomeno Telegram. A cosa è dovuto?</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/il-fenomeno-telegram-cosa-e-dovuto/</link>
+      <pubDate>Wed, 26 Feb 2014 09:36:18 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/il-fenomeno-telegram-cosa-e-dovuto/</guid>
+      <description>Il 20 Febbraio 2014, Facebook ha annunciato l&#39;acquisto della famosissima applicazione per smartphone WhatsApp per la modica cifra di 19 miliardi di dollari.
+Lo stesso giorno, 500,000 persone hanno installato sui propri telefoni una certa applicazione chiamata Telegram, dando così il via ad un fenomeno che dopo soli 4 giorni ha prodotto 8 milioni di nuovi iscritti, come testimoniato da alcuni tweet dell&#39;account ufficiale tra i quali, forse, il più emblematico è quello che annuncia la necessità di potenziare la loro rete di server per far fronte all&#39;espansione:</description>
+    </item>
+    
+    <item>
+      <title>Tutti con la testa fra le nuvole (Cloud)</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/tutti-con-la-testa-fra-le-nuvole-cloud/</link>
+      <pubDate>Thu, 06 Feb 2014 09:31:32 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/tutti-con-la-testa-fra-le-nuvole-cloud/</guid>
+      <description>Negli ultimi anni l&#39;utilizzo di servizi in Cloud si è diffuso con sorprendente velocità anche in Italia. Sempre più utenti ed aziende sfruttano gli enormi vantaggi dati dall&#39;impiego di questa nuova tecnoligia.
+Molti utilizzatori, tuttavia, non hanno idea di essere tali. Di fatto, utilizzano questo tipo di servizi ogni giorno senza rendersene conto. E&amp;rsquo; molto probabile che tra questi ci sia anche tu che stai leggendo questo articolo ed ora ti mostrerò il perché.</description>
+    </item>
+    
+    <item>
+      <title>Modificare username WordPress utilizzando phpMyAdmin</title>
+      <link>https://valeriogalano.it/tutorials/modificare-username-wordpress-utilizzando-phpmyadmin/</link>
+      <pubDate>Tue, 04 Feb 2014 11:29:57 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/modificare-username-wordpress-utilizzando-phpmyadmin/</guid>
+      <description>Come sicuramente saprete, WordPress non permette agli utenti di cambiare la propria username dal pannello di amministrazione. Tuttavia, avendo accesso al database, è possibile agirare facilmente tale limitazione.
+In questo piccolo tutorial, vedremo tutti i passaggi necessari per cambiare un nome utente di WordPress modificando direttamente i record del database. Ovviamente, queste operazioni possono essere eseguite con qualsiasi client MySQL, ma le seguenti schermate si riferiscono a phpMyAdmin.
+Per prima cosa, dobbiamo accedere a phpMyAdmin.</description>
+    </item>
+    
+    <item>
+      <title>Delete history of on your own SparkleShare server</title>
+      <link>https://valeriogalano.it/tutorials/delete-history-sparkleshare-server/</link>
+      <pubDate>Wed, 25 Sep 2013 14:55:44 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/delete-history-sparkleshare-server/</guid>
+      <description>SparkleShareis a little Open Source software that allows users to share documents and files with version control and client side encryption system.
+To put it simply, it acts like Dropbox or Ubuntu One, but it works on top of a Gitrepository. This means that, if you want, you can simply setup you own a SparkleShare server and share office documents with your colleagues having all infrastructure under your control using Git.</description>
+    </item>
+    
+    <item>
+      <title>Change WordPress username using phpMyAdmin</title>
+      <link>https://valeriogalano.it/tutorials/change-wordpress-username-using-phpmyadmin/</link>
+      <pubDate>Mon, 09 Sep 2013 10:23:12 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/change-wordpress-username-using-phpmyadmin/</guid>
+      <description>As you surely know, WordPress doesn&#39;t allow users to change their username from administration panel. But, if you have access to WordPress database, you can simply workaround this limitation.
+In this little tutorial, we will show all steps needed to change a WordPress username directly editing database records. Of course, this operations can be done with every MySQL client, but following snapshots specifically refers to phpMyAdmin.
+First of all, we need to access to phpMyAdmin.</description>
+    </item>
+    
+    <item>
+      <title>Setup Oracle JDK 7 &#43; Netbeans 7.0.1 on Ubuntu 12.04 LTS</title>
+      <link>https://valeriogalano.it/tutorials/setup-oracle-jdk-netbeans-environment-on-ubuntu/</link>
+      <pubDate>Fri, 30 Aug 2013 14:58:19 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/setup-oracle-jdk-netbeans-environment-on-ubuntu/</guid>
+      <description>In this post we will see how to setup a basic environment to develop Java applications on a Ubuntu Precise Pangolin. Normally this setup should be a very simple operation, anyway I had some trouble during process, so I decided to write down and describe all steps I followed to sort out.
+First of all, I installed Oracle Java Development Kit using specific webupd8team repository.
+Please note that this step is mandatory because using ubuntu openjdk package, Netbeans won&#39;t be able to work correctly: in fact new project window will lock down on &amp;ldquo;please wait&amp;hellip;&amp;rdquo; message.</description>
+    </item>
+    
+    <item>
+      <title>Update Twitter Bootstrap to release 3 in Zend Framework 2</title>
+      <link>https://valeriogalano.it/php/update-twitter-bootstrap-to-release-3-in-zend-framework-2/</link>
+      <pubDate>Sat, 10 Aug 2013 09:16:47 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/php/update-twitter-bootstrap-to-release-3-in-zend-framework-2/</guid>
+      <description>Recently I started a new project based on Zend Framework 2, using Twitter Bootstrap as CSS framework. Some days ago, new Bootstrap v3 was released and introduced a lot of changes and improvements. Because of ZF2 Skeleton Application comes out-of-box with Twitter Bootstap 2, I decided to setup the new project skeleton and update CSS framework to latest available release.
+In this post, I&#39;ll describe the process to update Bootstrap to v3 into a ZF2 project.</description>
+    </item>
+    
+    <item>
+      <title>Fix Hibernation after swap partition resize</title>
+      <link>https://valeriogalano.it/tutorials/fix-hibernation-after-swap-partition-resize/</link>
+      <pubDate>Mon, 05 Aug 2013 15:16:30 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/fix-hibernation-after-swap-partition-resize/</guid>
+      <description>Hibernation can be an important feature for many users: it allows people to turn on the PC and get it in the exact state session of when it was turned off (open files, running applications, configurations edited, terminals, etc.).
+This feature is based on usage of swap partition. In poor words: when user hibernate PC, all content of RAM memory is stored in this partition and is fetched at next startup time.</description>
+    </item>
+    
+    <item>
+      <title>Riattivare ibernazione dopo il ridimensionamento della partizione swap</title>
+      <link>https://valeriogalano.it/tutorials/riattivare-ibernazione-dopo-il-ridimensionamento-della-partizione-swap/</link>
+      <pubDate>Mon, 05 Aug 2013 15:16:30 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/riattivare-ibernazione-dopo-il-ridimensionamento-della-partizione-swap/</guid>
+      <description>L&#39;ibernazione può essere un funzionalità importante per molti utenti: essa permette di spegnere il PC ed ottenere, alla riaccensione, la sessione nello stesso identico stato di quando è stata arrestata (file aperti, applicazioni caricate, configurazioni modificate, terminali, ecc.).
+Questa funzionalità si basa sull&#39;utilizzo della partizione di swap. In parole povere: quando l&#39;utente iberna il PC, tutto il contenuto della memoria RAM viene conservato in questa partizione e viene recuperato all&#39;avvio successivo.</description>
+    </item>
+    
+    <item>
+      <title>Resize multiple images using Linux</title>
+      <link>https://valeriogalano.it/tutorials/resize-multiple-images-using-linux/</link>
+      <pubDate>Thu, 11 Jul 2013 15:59:46 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/resize-multiple-images-using-linux/</guid>
+      <description>Resize an image is a simple operation: there are many software able to do that. The most obvious are Gimpor Photoshop. But what&#39;s the right procedure to resize lots of images?
+Imagine you have to prepare thumbnails for a gallery or resize all images to insert into a presentation or, again, reduce photos to send them by email, etc.
+Open each image with Gimp or Photoshop and resize them one by one is foolish.</description>
+    </item>
+    
+    <item>
+      <title>Ridimensionare un gran numero di immagini con Linux</title>
+      <link>https://valeriogalano.it/tutorials/ridimensionare-un-gran-numero-di-immagini-con-linux/</link>
+      <pubDate>Thu, 11 Jul 2013 15:59:46 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/ridimensionare-un-gran-numero-di-immagini-con-linux/</guid>
+      <description>Il problema Ridimensionare un immagine è un&#39;operazione semplice: esistono molti software in grado di farlo. I più conosciuti sono Gimpe Photoshop. Ma qual&#39;è la giusta procedura per ridimensionare un gran numero di immagini?
+Immaginate di dover preparare le anteprime per una galleria o di dover ridimensionare tutte le immagini da inserire in una presentazione o, ancora, di dover ridurre delle foto da mandare via email, e così via.
+Aprire le immagini con Gimp o Photoshop e ridimensionarle una ad una sarebbe una follia.</description>
+    </item>
+    
+    <item>
+      <title>PHP jobs with Gearman and Supervisor</title>
+      <link>https://valeriogalano.it/php/php-jobs-with-gearman-and-supervisor/</link>
+      <pubDate>Sun, 09 Jun 2013 10:45:22 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/php/php-jobs-with-gearman-and-supervisor/</guid>
+      <description>The problem Often in a PHP project there could be operations that need to be executed asynchronously. Some example are: processing mail queues, indexing data, computation that requires long elaboration time.
+A common behavior is handle those operations by using cron to execute processes in background. However, using cron requires expedients to avoid cross executions and forces us to implement some specific procedures and mechanism to store data needed to elaborate.</description>
+    </item>
+    
+    <item>
+      <title>Processi PHP con Gearman e Supervisor</title>
+      <link>https://valeriogalano.it/php/processi-php-con-gearman-e-supervisor/</link>
+      <pubDate>Sun, 09 Jun 2013 10:45:22 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/php/processi-php-con-gearman-e-supervisor/</guid>
+      <description>Problema Spesso in un progetto PHP capita di dover eseguire operazioni in modo asincrono. Alcuni esempi sono: lavorazione di code email, indicizzazione di dati, calcoli che richiedono lunghi tempi di elaborazione.
+Prassi comune è gestire tali operazioni utilizzando cron per eseguire processi in backgroud. Tuttavia, utilizzare cron richiede espedienti per evitare l&#39;accavallemento delle esecuzioni e ci costringe ad implementare procedure specifiche e meccanismi di stoccaggio dei dati necessari per l&#39;elaborazione.</description>
+    </item>
+    
+    <item>
+      <title>jQuery Tree Widget</title>
+      <link>https://valeriogalano.it/jquery-tree-widget/</link>
+      <pubDate>Tue, 04 Jun 2013 18:25:57 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/jquery-tree-widget/</guid>
+      <description>Overview daredevel’s jQuery Tree is a jQuery UI widget that you can use to add advanced features to an html tree built using nested unordered lists.
+It’s designed to be fast, lightweight, simple to deploy and setup and highly configurable.
+ Live demo Issue tracker Download Source code  Documentation Options checkbox Defines if tree nodes will have a checkbox field.
+ collapseDuration Defines duration of collapse effect in ms. Works only if collapseEffect is not null.</description>
+    </item>
+    
+    <item>
+      <title>Zend Framework 3.0 branch started!</title>
+      <link>https://valeriogalano.it/news-e-approfondimenti/zend-framework-3-0-branch-started/</link>
+      <pubDate>Fri, 31 May 2013 08:00:26 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/news-e-approfondimenti/zend-framework-3-0-branch-started/</guid>
+      <description>Yesterday, Evan Coury, Zend Framework contibutor, announced start of Zend Framework branch.
+Development goals will be merged between ZF team ideas and community suggestions that will be collected in this topic. Anyway, Evan immediatly specifies that development will be focused on avoid dramatic migration as was for transition from ZF1 to ZF2.
+For all developers that use Zend Framework for their projects, this is the best opportunity to take part to development process and be heard about their needs: power of Open Source.</description>
+    </item>
+    
+    <item>
+      <title>Configurare filtri Doctrine 2 in Zend Framework 2</title>
+      <link>https://valeriogalano.it/php/configurare-filtri-doctrine-2-in-zend-framework-2/</link>
+      <pubDate>Mon, 27 May 2013 12:41:38 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/php/configurare-filtri-doctrine-2-in-zend-framework-2/</guid>
+      <description>Scenario Un filtro di Doctrine è uno strumento molto potente che può essere utilizzato per aggiungere condizioni a livello SQL all&#39;interno del nostro gestore di oggetti Doctrine 2. Ciò significa che i filtri influenzeranno il comportamento di query DQL, collezioni, recupero dati, ecc.
+Come configurare ed utilizzare filtri in condizioni generali è ben spiegato in questo questo articolo della documentazione officiale di Doctrine, ma in un progetto basato su Zend Framework 2, la stessa operazione è un po&amp;rsquo; diversa.</description>
+    </item>
+    
+    <item>
+      <title>Setup Doctrine 2 filters in Zend Framework 2</title>
+      <link>https://valeriogalano.it/php/setup-doctrine2-filters-in-zend-framework-2/</link>
+      <pubDate>Mon, 27 May 2013 12:41:38 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/php/setup-doctrine2-filters-in-zend-framework-2/</guid>
+      <description>Scenario Doctrine filter is a very powerfull tool that can be used to add conditional clauses at SQL level into our Doctrine 2 engine. This means that filters constraints will affect DQL queries, collections, lazy loading, etc.
+How to setup and use filters in generic conditions is well explained in this article of official Doctrine documentation, but in a Zend Framework 2 project, the same operation is a bit different.</description>
+    </item>
+    
+    <item>
+      <title>Get latest LibreOffice in Ubuntu</title>
+      <link>https://valeriogalano.it/tutorials/get-latest-libreoffice-in-ubuntu/</link>
+      <pubDate>Mon, 27 May 2013 12:41:30 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/get-latest-libreoffice-in-ubuntu/</guid>
+      <description>LibreOffice is actually the most famous Open Source Office Suite. Unfortunately, Ubuntu repositories often doesn&#39;t contains latest versions of it.
+If you like to have your LibreOffice always updated, you can simply execute following commands in your terminal:
+$ sudo add-apt-repository ppa:libreoffice/ppa $ sudo apt-get update $ sudo apt-get dist-upgrade At the end of the process, simply run LibreOffice from applications menu and have fun.</description>
+    </item>
+    
+    <item>
+      <title>Creare e modificare documenti PDF con LibreOffice</title>
+      <link>https://valeriogalano.it/tutorials/creare-e-modificare-documenti-pdf-con-libreoffice/</link>
+      <pubDate>Fri, 24 May 2013 21:29:10 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/creare-e-modificare-documenti-pdf-con-libreoffice/</guid>
+      <description>Creare file PDF è un&#39;operazione piuttosto comune. Modificarli, invece, è un po&amp;rsquo; meno comune ma, comunque, una funzione molto richiesta.
+LibreOffice esporta normalmente documenti in PDF. Dovete semplicemente cliccare su File -&amp;gt; Export in formato PDF.
+Ma, se lo desiderate, potete anche importare un PDF in Writer al fine di modificarlo. Tutto ciò di cui avete bisogno è un estensione chiamata pdf-import. Per installarla, eseguite semplicemente i seguenti comandi nel vostro terminale:</description>
+    </item>
+    
+    <item>
+      <title>Create and edit PDF documents with LibreOffice</title>
+      <link>https://valeriogalano.it/tutorials/create-and-edit-pdf-documents-with-libreoffice/</link>
+      <pubDate>Fri, 24 May 2013 21:29:10 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/create-and-edit-pdf-documents-with-libreoffice/</guid>
+      <description>Create PDF files is a very common operation. Modify them is a bit less common but, anyway, a very requested feature.
+LibreOffice exports documents as PDF by default. You simply click File -&amp;gt; Export in PDF format.
+But, if you want, you can also import a PDF file into Writer to modify it. All you need is an extension called pdf-import. To install it, simply execute following commands in your terminal:</description>
+    </item>
+    
+    <item>
+      <title>Come installare Funambol 10 su Debian Wheezy</title>
+      <link>https://valeriogalano.it/tutorials/come-installare-funambol-10-su-debian-wheezy/</link>
+      <pubDate>Wed, 22 May 2013 18:43:23 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/come-installare-funambol-10-su-debian-wheezy/</guid>
+      <description>In questo articolo vedremo come installare Funambol 10.0.3 su un server Debian Wheezy.
+Innanzitutto, dobbiamo installare sul server il Java jdk:
+$ apt-get install default-jdk In seguito, creiamo una cartella in cui scaricare e decomprimere Funambol (al momento, alla versione 10.0.3):
+$ mkdir -p /opt/Funambol $ cd /opt/Funambol $ wget -c http://downloads.sourceforge.net/project/funambol/bundle/v10/funambol-10.0.3-x64.bin $ chmod +x funambol-10.0.3-x64.bin $ ./funambol-10.0.3-x64.bin Ora, abbiamo bisogno di un utente specifico per far girare Funambol. Così, creiamo un gruppo chiamato funambol ed anche un utente chiamato funambol con /opt/Funambol come cartella home:</description>
+    </item>
+    
+    <item>
+      <title>How to install Funambol 10 on Debian Wheezy</title>
+      <link>https://valeriogalano.it/tutorials/how-to-install-funambol-10-on-debian-wheezy/</link>
+      <pubDate>Wed, 22 May 2013 18:43:23 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/tutorials/how-to-install-funambol-10-on-debian-wheezy/</guid>
+      <description>In this post we will cover how to install Funambol 10.0.3 on Debian Wheezy server.
+First of all, we need to install Java jdk on server:
+$ apt-get install default-jdk Then, let&#39;s create a folder to download and uncompress Funambol (at the moment, at version 10.0.3):
+$ mkdir -p /opt/Funambol $ cd /opt/Funambol $ wget -c http://downloads.sourceforge.net/project/funambol/bundle/v10/funambol-10.0.3-x64.bin $ chmod +x funambol-10.0.3-x64.bin $ ./funambol-10.0.3-x64.bin Now, we need a specific user to make Funambol run.</description>
+    </item>
+    
+    <item>
+      <title>ReCaptcha in Zend Framework 2 without Zend/Form</title>
+      <link>https://valeriogalano.it/php/recaptcha-in-zend-framework-2-project-using-zendform-component/</link>
+      <pubDate>Fri, 15 Mar 2013 09:52:36 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/php/recaptcha-in-zend-framework-2-project-using-zendform-component/</guid>
+      <description>The problem Captcha is a very useful mechanism to avoid automated abuse of your sites and applications. In particular,reCAPTCHA is a Google powered service that offers a free and simple way to implement a captcha protection field in your forms or pages. Zend Framework 2 implements his own components to handle captcha and a specific one to handle reCAPTCHA service. At the moment, the ZF2 documentation is very usefull if you want to integrate a reCAPTCHA in your Zend/Form component, but lacks in describing how to use reCAPTCHA service component alone.</description>
+    </item>
+    
+    <item>
+      <title>Working with DateTime in Doctrine 2 and Zend Framework 2</title>
+      <link>https://valeriogalano.it/php/working-with-datetime-in-doctrine2-and-zend-framework-2/</link>
+      <pubDate>Tue, 12 Mar 2013 09:52:39 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/php/working-with-datetime-in-doctrine2-and-zend-framework-2/</guid>
+      <description>The problem Storing datetimes can be a issue if servers and users of your application are distributed around the World and use different time zones. Each user want to work on datetimes in his specific time zone, servers automatically stores values in their time zone, etc. Storing data without operating right conversion will cause strange behaviours.
+The solution The solution is very simple: store all datetimes in UTC time zone and show to each user in his proper time zone.</description>
+    </item>
+    
+    <item>
+      <title>Switch to mobile, tablet, or other layout in Zend Framework 1.11</title>
+      <link>https://valeriogalano.it/php/switch-to-mobile-tablet-or-other-layout-in-zend-framework-1-11/</link>
+      <pubDate>Mon, 12 Dec 2011 09:33:10 +0000</pubDate>
+      
+      <guid>https://valeriogalano.it/php/switch-to-mobile-tablet-or-other-layout-in-zend-framework-1-11/</guid>
+      <description>The problem We want to implement a method to completely switch layout of our Zend Framework application without loosing flexibility. The solution must give us the possibility of switching all layouts and the views of the controllers we want.Other&#39;s solutions I found some solutions on the Web, but I decided to post this article because no one satisfies my needs. They all resort to ContextSwitch to handle views file names, but, in my applications, I just use ContextSwitch in some actions for other purpose, so I&#39;m unable to apply them without restructure existing code.</description>
+    </item>
+    
+  </channel>
+</rss>

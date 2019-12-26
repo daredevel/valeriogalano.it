@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> La responsabilità di dire “No” &middot; Valerio Galano - Software developer </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.62.0" />
+
+
+<script src="/js/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://valeriogalano.it/css/nix.css">
+
+
+
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {"lang":"it","siteId":110958,"consentOnLinkAndButton":false,"consentOnElement":null,"consentOnScroll":false,"cookiePolicyId":521121, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"position":"float-top-center","acceptButtonColor":"#0073CE","acceptButtonCaptionColor":"white","customizeButtonColor":"#DADADA","customizeButtonCaptionColor":"#4D4D4D","textColor":"black","backgroundColor":"white" }};
+    </script><script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://valeriogalano.it/>valerio@daredevel ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://valeriogalano.it/">/home/valerio</a>
+				</li>
+				
+				
+				<li class="dropdown">
+                    
+            		<a href="/post">~/blog</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="https://pensieriincodice.it/">~/podcast</a>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://valeriogalano.it/news-e-approfondimenti/la-responsabilita-di-dire-no/">La responsabilità di dire “No”</a></h1>
+            <span class="post-date">Nov 28, 2017 </span>
+            <div class="post-content">
+                <p>Lo scorso 4 novembre, durante la ScotlandPHP Conference 2017, ho avuto il piacere di assistere ad un inspirato intervento di <a href="href=%22http://www.geekyboy.com/%22">Adam Culp</a> sul tema dello <strong>sviluppo di codice pulito</strong>. Ho trovato tale intervento particolarmente interessante perché, se pur ribadendo concetti che tutti gli <strong>addetti ai lavori</strong> conoscono (o dovrebbero conoscere), Adam ha voluto porre l’accento sull’aspetto professionale della questione e sulle responsabilità dei soggetti coinvolti.</p>
+<p>L’idea che molti hanno dello sviluppo software (talvolta anche in ambienti professionali) è che il lavoro consista semplicemente nella scrittura, nel minor tempo possibile, di codice privo di errori di sintassi e che restituisca l’output desiderato. <strong>Ma non è affatto così.</strong></p>
+<p>Lo sviluppo di software, come qualsiasi altra attività lavorativa,può produrre risultati di diversa qualità. Il codice che ne viene fuori può semplicemente funzionare (a volte nemmeno questo) o può essere ben strutturato, consistente, chiaro, essenziale, riusabile, e rispettare gli standard di codifica del linguaggio nel quale è stato sviluppato…</p>
+<p>Del codice scritto in modo <strong>pulito</strong> richiederà più tempo per la prima stesura ma risulterà <strong>molto più semplice da manutenere, estendere o modificare</strong> quando se ne verificherà la necessità.</p>
+<p>Chiunque di noi programmatori con un minimo di esperienza si è trovato nella vita a dover fronteggiare del codice cattivo, confusionario, con caratteristiche non ben chiare e definite. Sappiamo benissimo che tale sfortuna riduce drasticamente la nostra produttività: modifiche che dovrebbero richiedere qualche ora, infatti, si trasformano in stressanti maratone di tentativi falliti e rinvenimenti di scheletri negli armadi che possono durare giorni.</p>
+<p>Un codice di scarsa qualità, inoltre, può rappresentare un serio problema per la longevità di un software. Correggere del codice cattivo e/o scriverne di pulito in un progetto di bassa qualità, infatti, è un qualcosa di davvero molto complesso: occorre tempo, una documentazione chiara e la conoscenza perfetta di tutte le specifiche. <strong>A volte può essere più conveniente avviare lo sviluppo di un nuovo software piuttosto che cercare di recuperare quello vecchio.</strong></p>
+<p>Prendete un qualsiasi programmatore e ponetegli la domanda: “E’ meglio sviluppare in modo pulito o veloce?”. Egli vi risponderà, ovviamente: “In modo pulito!”.</p>
+<p>E allora perché esiste codice cattivo? Perché noi sviluppiamo codice cattivo? (E sì, perché tutti lo abbiamo fatto… e talvolta lo facciamo ancora…).</p>
+<p>E’ possibile che non siamo capaci (richiede comunque una certa abilità), o che non ne abbiamo voglia in un particolare momento… ma il più delle volte, <strong>perché vogliamo accontentare qualcuno</strong>.</p>
+<p>Difficilmente sviluppiamo codice per noi stessi: di solito c’è un capo o un cliente che, giustamente, spingono perché il lavoro sia completato al più presto e/o con in minor dispendio possibile di risorse. E’ normale. Dunque, noi cerchiamo di fare più in fretta, magari tralasciando questa o quella buona norma che richiederebbero qualche oretta in più…</p>
+<p>Proprio a questo proposito, nel suo intervento, Adam ha utilizzato l’espressione <strong><em>Responsability to say “NO”</em></strong>.</p>
+<p>Sì, perché, in quanto professionisti del settore dello sviluppo software, noi abbiamo la precisa <strong>responsabilità di opporci a quelle richieste che sappiamo essere sbagliate</strong>.</p>
+<p>I nostri clienti o i nostri capi si rivolgono a noi per avere un prodotto che spesso sono in grado di comprendere e giudicare solo in parte. Sta a noi e alla nostra professionalità, fornire loro qualcosa che sia di qualità anche sotto quei punti di vista che loro non posso apprezzare immediatamente.</p>
+<p>Se dicessimo al nostro chirurgo che per risparmiare tempo in sala operatoria vogliamo che eviti di lavarsi le mani, pensate che lui ci accontenterebbe? Ovviamente no.</p>
+<p>Allo stesso modo, noi <strong>non dobbiamo assecondare richieste incompatibili con il lavoro che stiamo andando a svolgere</strong>.</p>
+
+            </div>
+            
+            <div class="post-comments">
+                
+<div id="disqus_thread"></div>
+<script type="text/plain" class="_iub_cs_activate">
+
+(function() {
+    // Don't ever inject Disqus on localhost--it creates unwanted
+    // discussions from 'localhost:1313' on your Disqus account...
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'daredevel';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2019 Valerio Galano -
+	<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme
+</span> -
+<a href="https://www.iubenda.com/privacy-policy/521121" class="iubenda-nostyle no-brand iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+</p>
+</footer>
+
+    </body>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Configurare filtri Doctrine 2 in Zend Framework 2 &middot; Valerio Galano - Software developer </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.62.0" />
+
+
+<script src="/js/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://valeriogalano.it/css/nix.css">
+
+
+
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {"lang":"it","siteId":110958,"consentOnLinkAndButton":false,"consentOnElement":null,"consentOnScroll":false,"cookiePolicyId":521121, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"position":"float-top-center","acceptButtonColor":"#0073CE","acceptButtonCaptionColor":"white","customizeButtonColor":"#DADADA","customizeButtonCaptionColor":"#4D4D4D","textColor":"black","backgroundColor":"white" }};
+    </script><script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://valeriogalano.it/>valerio@daredevel ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://valeriogalano.it/">/home/valerio</a>
+				</li>
+				
+				
+				<li class="dropdown">
+                    
+            		<a href="/post">~/blog</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="https://pensieriincodice.it/">~/podcast</a>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://valeriogalano.it/php/configurare-filtri-doctrine-2-in-zend-framework-2/">Configurare filtri Doctrine 2 in Zend Framework 2</a></h1>
+            <span class="post-date">May 27, 2013 </span>
+            <div class="post-content">
+                <h1 id="scenario">Scenario</h1>
+<p>Un <a href="http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/filters.html">filtro di Doctrine</a> è uno strumento molto potente che può essere utilizzato per aggiungere condizioni a livello SQL all'interno del nostro gestore di oggetti Doctrine 2. Ciò significa che i filtri influenzeranno il comportamento di query DQL, collezioni, recupero dati, ecc.</p>
+<p>Come configurare ed utilizzare filtri in condizioni generali è ben spiegato in questo <a href="http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/filters.html">questo articolo</a> della documentazione officiale di Doctrine, ma in un progetto basato su <a href="http://framework.zend.com/">Zend Framework 2</a>, la stessa operazione è un po&rsquo; diversa.</p>
+<p>Così, in questo articolo, vedremo come configurare uno o più filtri nei nostri progetti sviluppati su Zend Framework 2.</p>
+<h1 id="esempio-esplicativo">Esempio esplicativo</h1>
+<p>Il seguente esempio è basato su quello riguardante un filtro &ldquo;locale&rdquo; mostrato nel <a href="http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/filters.html">manuale di Doctrine</a>. Assumeremo di avere un progetto ZF2 funzionante sviluppato a partire da <a href="https://github.com/zendframework/ZendSkeletonApplication">ZendSkeletonApplication</a> con il modulo <a href="http://github.com/doctrine/DoctrineORMModule">DoctrineORMModule</a> configurato (fare riferimento ai manuali ufficiali per raggiungere questo obiettivo).</p>
+<p>Innanzitutto, abbiamo bisogno di una classe interfaccia da utilizzare come segno distintivo per decidere quali entità saranno influenzate dal filtro. Quindi, se vorremo che un filtro sia applicato ad un'entità dovremo solo fargli implementare tale interfaccia. Ovviamente, possiamo anche utilizzare l'interfaccia per specificare quali metodi implementare nell'entità, se vogliamo. Questo può essere utile e vedremo un esempio in un prossimo articolo.</p>
+<p>/module/Application/src/Application/DoctrineFilter/MyLocaleFilterInterface.php:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">ApplicationDoctrineFilter</span><span class="p">;</span>
+
+<span class="sd">/**
+</span><span class="sd"> * Interface to support locale filter
+</span><span class="sd"> */</span>
+<span class="k">Interface</span> <span class="nx">MyLocaleFilterInterface</span>
+<span class="p">{</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>Essenzialmente, la definizione del filtro è identica a quella necessaria per l'utilizzo con Doctrine senza ZF2. Dobbiamo solo fare attenzione a dove posizionare il file e correggere i namespace:</p>
+<p>/module/Application/src/Application/DoctrineFilter/MyLocaleFilter.php:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">ApplicationDoctrineFilter</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">DoctrineORMMappingClassMetaData</span><span class="p">,</span>
+<span class="nx">DoctrineORMQueryFilterSQLFilter</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">MyLocaleFilter</span> <span class="k">extends</span> <span class="nx">SQLFilter</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">addFilterConstraint</span><span class="p">(</span><span class="nx">ClassMetadata</span> <span class="nv">$targetEntity</span><span class="p">,</span> <span class="nv">$targetTableAlias</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Check if the entity implements the LocalAware interface
+</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$targetEntity</span><span class="o">-&gt;</span><span class="na">reflClass</span><span class="o">-&gt;</span><span class="na">implementsInterface</span><span class="p">(</span><span class="s1">&#39;LocaleAware&#39;</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="nv">$targetTableAlias</span><span class="o">.</span><span class="s1">&#39;.locale = &#39;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getParameter</span><span class="p">(</span><span class="s1">&#39;locale&#39;</span><span class="p">);</span> <span class="c1">// getParameter applies quoting automatically
+</span><span class="c1"></span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>A questo punto, iniziano le vere differenze: per configurare il filtro, utilizzeremo il file di configurazione del modulo ZF2 invece del metodo addFilter() (come descritto nel manuale ufficiale). Quindi aggiungiamo le seguenti linee in module.config.php:</p>
+<p>/module/Application/config/module.config.php:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">return array(
+    ...
+    &#39;doctrine&#39; =&gt; array(
+        &#39;configuration&#39; =&gt; array(
+            &#39;orm_default&#39; =&gt; array(
+                ...
+                &#39;filters&#39; =&gt; array(
+                    &#39;my_locale&#39; =&gt; &#39;ApplicationDoctrineFilterMyLocaleFilter&#39;,
+                ),
+            ...
+            )
+        ),
+    ),
+    ...
+);</code></pre></td></tr></table>
+</div>
+</div>
+<p>Ora che il nostro nuovo filtro è configurato, possiamo attivarlo e disattivarlo da qualsiasi classe che implementi l'interfaccia ServiceManagerAwareInterface, aggiungendovi due semplici metodi come questi:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+    <span class="o">...</span>
+
+    <span class="c1">// in a controller or any class that implements ServiceManagerAwareInterface
+</span><span class="c1"></span>
+    <span class="sd">/**
+</span><span class="sd">     * Enable locale filter
+</span><span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">enableLocaleFilter</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$em</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getServiceManager</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;doctrine.entitymanager.orm_default&#39;</span><span class="p">);</span>
+
+        <span class="nv">$filter</span> <span class="o">=</span> <span class="nv">$em</span><span class="o">-&gt;</span><span class="na">getFilters</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">enable</span><span class="p">(</span><span class="s2">&#34;my_locale&#34;</span><span class="p">);</span>
+        <span class="nv">$filter</span><span class="o">-&gt;</span><span class="na">setParameter</span><span class="p">(</span><span class="s1">&#39;my_locale&#39;</span><span class="p">,</span> <span class="s1">&#39;en&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**
+</span><span class="sd">     * Disable locale filter
+</span><span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">disableLocaleFilter</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$em</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getServiceManager</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;doctrine.entitymanager.orm_default&#39;</span><span class="p">);</span>
+
+        <span class="nv">$filter</span> <span class="o">=</span> <span class="nv">$em</span><span class="o">-&gt;</span><span class="na">getFilters</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">disable</span><span class="p">(</span><span class="s2">&#34;my_locale&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="o">...</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>Se vogliamo, invece, attivare il filtro durante la fase di bootstrap, possiamo aggiungere le seguenti linee di codice nel file Module.php:</p>
+<p>/module/Application/Module.php:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Application</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">ZendEventManagerEventInterface</span><span class="p">,</span>
+<span class="o">...</span>
+
+<span class="k">class</span> <span class="nc">Module</span> <span class="k">implements</span> <span class="nx">BootstrapListenerInterface</span>
+<span class="p">{</span>
+    <span class="o">...</span>
+
+    <span class="sd">/**
+</span><span class="sd">     * Listen to the bootstrap event
+</span><span class="sd">     *
+</span><span class="sd">     * @param EventInterface $e
+</span><span class="sd">     * @return array
+</span><span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">onBootstrap</span><span class="p">(</span><span class="nx">EventInterface</span> <span class="nv">$e</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="o">...</span>
+
+        <span class="c1">// Enable and configure Doctrine filters
+</span><span class="c1"></span>        <span class="nv">$entityManager</span> <span class="o">=</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getApplication</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getServiceManager</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s1">&#39;doctrine.entitymanager.orm_default&#39;</span><span class="p">);</span>
+        <span class="nv">$filter</span> <span class="o">=</span> <span class="nv">$entityManager</span><span class="o">-&gt;</span><span class="na">getFilters</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">enable</span><span class="p">(</span><span class="s2">&#34;my_locale&#34;</span><span class="p">);</span>
+        <span class="nv">$filter</span><span class="o">-&gt;</span><span class="na">setParameter</span><span class="p">(</span><span class="s1">&#39;my_locale&#39;</span><span class="p">,</span> <span class="s1">&#39;en&#39;</span><span class="p">);</span>
+
+        <span class="o">...</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>E questo è tutto. D'ora in poi, quando il filtro &ldquo;my_locale&rdquo; è attivo, ciascuna entità coinvolta in query o caricamento di collezioni, verrano filtrati con le condizioni specificate nella classe filtro e i valori passati con il metodo setParameter(). Con poche linee di codice possiamo avere filtri completamente integrati nel progetto ZF2.</p>
+
+            </div>
+            
+            <div class="post-comments">
+                
+<div id="disqus_thread"></div>
+<script type="text/plain" class="_iub_cs_activate">
+
+(function() {
+    // Don't ever inject Disqus on localhost--it creates unwanted
+    // discussions from 'localhost:1313' on your Disqus account...
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'daredevel';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2019 Valerio Galano -
+	<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme
+</span> -
+<a href="https://www.iubenda.com/privacy-policy/521121" class="iubenda-nostyle no-brand iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+</p>
+</footer>
+
+    </body>

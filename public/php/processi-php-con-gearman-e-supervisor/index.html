@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Processi PHP con Gearman e Supervisor &middot; Valerio Galano - Software developer </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.62.0" />
+
+
+<script src="/js/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://valeriogalano.it/css/nix.css">
+
+
+
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {"lang":"it","siteId":110958,"consentOnLinkAndButton":false,"consentOnElement":null,"consentOnScroll":false,"cookiePolicyId":521121, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"position":"float-top-center","acceptButtonColor":"#0073CE","acceptButtonCaptionColor":"white","customizeButtonColor":"#DADADA","customizeButtonCaptionColor":"#4D4D4D","textColor":"black","backgroundColor":"white" }};
+    </script><script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://valeriogalano.it/>valerio@daredevel ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://valeriogalano.it/">/home/valerio</a>
+				</li>
+				
+				
+				<li class="dropdown">
+                    
+            		<a href="/post">~/blog</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="https://pensieriincodice.it/">~/podcast</a>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://valeriogalano.it/php/processi-php-con-gearman-e-supervisor/">Processi PHP con Gearman e Supervisor</a></h1>
+            <span class="post-date">Jun 9, 2013 </span>
+            <div class="post-content">
+                <h2 id="problema">Problema</h2>
+<p>Spesso in un progetto PHP capita di dover eseguire operazioni in modo asincrono. Alcuni esempi sono: lavorazione di code email, indicizzazione di dati, calcoli che richiedono lunghi tempi di elaborazione.</p>
+<p>Prassi comune è gestire tali operazioni utilizzando cron per eseguire processi in backgroud. Tuttavia, utilizzare cron richiede espedienti per evitare l'accavallemento delle esecuzioni e ci costringe ad implementare procedure specifiche e meccanismi di stoccaggio dei dati necessari per l'elaborazione.</p>
+<h2 id="soluzione-gearman--supervisor">Soluzione: Gearman + Supervisor</h2>
+<p>La soluzione che concerne Gearman e Supervisor, invece, non richiede alcun meccanismo di data storage e fornisce un modo molto semplice per sviluppare processi in PHP.</p>
+<p>Dalla <a href="http://www.gearman.org/">homepage di Gearman</a>:</p>
+<blockquote>
+<p>Gearman fornisce una applicazione framework generica per distribuire lavoro su altre macchine o processi che sono più adatti ad eseguire tale lavoro. Esso vi permette di eseguire lavori in parallelo, di bilanciare il carico di lavoro ed eseguire funzioni tra linguaggi diversi. Può essere utilizzato per una varietà di applicazioni, da siti Web con alta disponibilità a trasporto di eventi di replicazione database. In altre parole, è il sistema nervoso per la comunicazione distribuita fra processi.</p>
+</blockquote>
+<p>Inoltre, sviluppare clients e workers per Gearman in PHP è molto semplice, come mostrato in questo <a href="http://it2.php.net/manual/en/gearman.examples-reverse.php">esempio nella documentazione PHP di Gearman</a>.</p>
+<p>D'altra parte, come scritto sulla <a href="http://supervisord.org/">homepage di Supervisor</a>:</p>
+<blockquote>
+<p>Supervisor, è un sistema client/server che permette ai suoi utenti di monitorare e controllare un gran numero di processi su sistemi operativi derivati da UNIX.</p>
+</blockquote>
+<p>In pratica, la combinazione di Gearman e Supervisor crea una infrastruttura <strong>stabile</strong>, <strong>flessibile</strong> e <strong>scalabile</strong> per gestire i nostri jobs. Come mostrato nel seguente schema, essa ci fornisce una struttura client/server e si occupa della comunicazione e (volendo) della distribuzione. Noi dobbiamo solo aver cura di scrivere il codice per eseguire le nostre operazioni.</p>
+<figure>
+    <img src="/img/gearman_stack.png"
+         alt="Gearman stack"/> <figcaption>
+            <h4>Gearman stack</h4>
+        </figcaption>
+</figure>
+
+<h2 id="installazione">Installazione</h2>
+<p>Sto per mostrare come installare e configurare Gearman e Supervisor in ambiente debian wheezy.</p>
+<p>Normalmente, i seguenti pacchetti dovrebbero essere già presenti in un sistema configurato per il PHP, ma giusto per essere sicuri, lanciamo:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ apt-get install apache2 php5 libapache2-mod-php5 php5-dev</code></pre></div>
+<p>Ora siamo pronti per iniziare l'installazione di Gearman. I comandi necessari sono i seguenti:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ apt-get install gearman-job-server libgearman-dev</code></pre></div>
+<p>A questo punto dobbiamo installare l'estensione Pecl per Gearman per poter utilizzare le classi PHP necessarie. In un mondo perfetto, noi dovremmo semplicemente installare l'ultima versione, ma (al momento) la versione stabile di Gearman Pecl richiede una versione di libgearman più nuova di quella presente nei repository di debian e, se provassimo ad installarla, dovremmo ricevere un errore simile al seguente:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">configure: error: libgearman version 1.1.0 or later required
+ERROR: <span class="sb">`</span>/tmp/pear/temp/gearman/configure<span class="err">&#39;</span> failed</code></pre></div>
+<p>Per risolvere questo problema, potremmo compilare e installare noi stessi libgearman, oppure, come preferisco io, installare una versione più vecchia di estensione Pecl lanciando i seguenti comandi:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ apt-get install php-pear
+$ pecl install gearman-1.0.3</code></pre></div>
+<p>Nota: se preferite compilare voi libgearman, potete facilmente trovare il modo cercando su Google.</p>
+<p>Per completare l'installazione, i seguenti comandi attivano l'estensione Gearman per Apache2:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nb">echo</span> <span class="s2">&#34;extension=gearman.so&#34;</span> &gt; /etc/php5/conf.d/gearman.ini
+$ service apache2 restart</code></pre></div>
+<p>A questo punto, siamo pronti per creare i nostri client e worker per Gearman come mostrato nella <a href="http://it2.php.net/manual/en/book.gearman.php">sezione Gearman della documentazione PHP</a>.</p>
+<p>Ma noi non siamo ancora soddisfatti: noi vogliamo anche poter gestire i nostri processi in modo intelligente. Vogliamo poterli controllare, monitorarli e specificare dettagli come: numero di istanze, priorità, ecc. In pratica, vogliamo eseguirli attraverso Supervisor.</p>
+<p>Quindi installiamolo:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ apt-get install supervisor</code></pre></div>
+<p>In debian, supervisor è un demone di sistema e può essere avviato e fermato usando i soliti comandi:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ service supervisor start
+$ service supervisor stop</code></pre></div>
+<p>L'ultimo passo è configurare i nostri workers di Gearman in Supervisor. Per farlo, creeremo dei file in <em>/etc/supervisor/conf.d/</em> che conterranno una configurazione simile a questa:</p>
+<p>/etc/supervisor/conf.d/myprocess.conf:</p>
+<div class="highlight"><pre class="chroma"><code class="language-ini" data-lang="ini"><span class="k">[program:myprocess]</span>
+<span class="na">command</span><span class="o">=</span><span class="s">php /path/to/project/myprocess.php</span>
+<span class="na">numprocs</span><span class="o">=</span><span class="s">12</span>
+<span class="na">directory</span><span class="o">=</span><span class="s">/path/to/project/spool/myprocess/</span>
+<span class="na">autostart</span><span class="o">=</span><span class="s">true</span>
+<span class="na">autorestart</span><span class="o">=</span><span class="s">true</span>
+<span class="na">stdout_logfile</span><span class="o">=</span><span class="s">/path/to/project/log/myprocess.log</span>
+<span class="na">stdout_logfile_maxbytes</span><span class="o">=</span><span class="s">1MB</span>
+<span class="na">stderr_logfile</span><span class="o">=</span><span class="s">/path/to/project/log/myprocess.log</span>
+<span class="na">stderr_logfile_maxbytes</span><span class="o">=</span><span class="s">1MB</span></code></pre></div>
+<p>Per la lista completa delle opzioni, fare riferimento alla <a href="http://supervisord.org/">documentazione di Supervisor</a>.</p>
+<h3 id="riferimenti">Riferimenti:</h3>
+<ul>
+<li><a href="http://www.gearman.org/">Gearman homepage</a></li>
+<li><a href="http://it2.php.net/manual/en/book.gearman.php">PHP Gearman manual</a>.</li>
+<li><a href="http://supervisord.org/">Supervisor homepage</a></li>
+</ul>
+
+            </div>
+            
+            <div class="post-comments">
+                
+<div id="disqus_thread"></div>
+<script type="text/plain" class="_iub_cs_activate">
+
+(function() {
+    // Don't ever inject Disqus on localhost--it creates unwanted
+    // discussions from 'localhost:1313' on your Disqus account...
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'daredevel';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2019 Valerio Galano -
+	<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme
+</span> -
+<a href="https://www.iubenda.com/privacy-policy/521121" class="iubenda-nostyle no-brand iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+</p>
+</footer>
+
+    </body>

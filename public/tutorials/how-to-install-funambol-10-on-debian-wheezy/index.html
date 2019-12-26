@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> How to install Funambol 10 on Debian Wheezy &middot; Valerio Galano - Software developer </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.62.0" />
+
+
+<script src="/js/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://valeriogalano.it/css/nix.css">
+
+
+
+<link rel="shortcut icon" href="/img/favicon.ico">
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {"lang":"it","siteId":110958,"consentOnLinkAndButton":false,"consentOnElement":null,"consentOnScroll":false,"cookiePolicyId":521121, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"position":"float-top-center","acceptButtonColor":"#0073CE","acceptButtonCaptionColor":"white","customizeButtonColor":"#DADADA","customizeButtonCaptionColor":"#4D4D4D","textColor":"black","backgroundColor":"white" }};
+    </script><script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=https://valeriogalano.it/>valerio@daredevel ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="https://valeriogalano.it/">/home/valerio</a>
+				</li>
+				
+				
+				<li class="dropdown">
+                    
+            		<a href="/post">~/blog</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="https://pensieriincodice.it/">~/podcast</a>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <h1><a href="https://valeriogalano.it/tutorials/how-to-install-funambol-10-on-debian-wheezy/">How to install Funambol 10 on Debian Wheezy</a></h1>
+            <span class="post-date">May 22, 2013 </span>
+            <div class="post-content">
+                <p>In this post we will cover how to install Funambol 10.0.3 on Debian Wheezy server.</p>
+<p>First of all, we need to install Java jdk on server:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ apt-get install default-jdk</code></pre></div>
+<p>Then, let's create a folder to download and uncompress Funambol (at the moment, at version 10.0.3):</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ mkdir -p /opt/Funambol 
+$ <span class="nb">cd</span> /opt/Funambol 
+$ wget -c http://downloads.sourceforge.net/project/funambol/bundle/v10/funambol-10.0.3-x64.bin 
+$ chmod +x funambol-10.0.3-x64.bin 
+$ ./funambol-10.0.3-x64.bin</code></pre></div>
+<p>Now, we need a specific user to make Funambol run. So let's create a group called funambol and a user also called funambol with /opt/Funambol as home folder:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ groupadd funambol 
+$ useradd -g funambol -m -d /opt/Funambol -s /bin/sh funambol 
+$ chown funambol:funambol -fR /opt/Funambol</code></pre></div>
+<p>If always goes well, browsing at <a href="http://localhost:8080/">http://localhost:8080/</a> we should see a web demo in which test contacts and calendars.</p>
+<p>At this point, Funambol is ready to work, but we want be able start and stop it as a system service. So, let's create and edit file /etc/init.d/funambol:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ vi /etc/init.d/funambol</code></pre></div>
+<p>and put following code as content (based on <a href="http://www.deec.it/2009/09/03/installare-funambol-su-debian/">http://www.deec.it/2009/09/03/installare-funambol-su-debian/</a>):</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh
+</span><span class="cp"></span>
+<span class="nb">cd</span> <span class="sb">`</span>dirname <span class="nv">$0</span><span class="sb">`</span>
+<span class="nv">FUNAMBOL_HOME</span><span class="o">=</span><span class="sb">`</span><span class="o">(</span><span class="nb">cd</span> /opt/Funambol <span class="p">;</span> <span class="nb">pwd</span><span class="o">)</span><span class="sb">`</span>
+<span class="nv">DS_SERVER_HOME</span><span class="o">=</span><span class="nv">$FUNAMBOL_HOME</span>/ds-server
+
+<span class="k">if</span> <span class="o">[</span> ! -d <span class="nv">$FUNAMBOL_HOME</span>/config <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+#
+<span class="c1"># maybe we are in Funambol/tool/bin</span>
+#
+<span class="nv">FUNAMBOL_HOME</span><span class="o">=</span><span class="nv">$FUNAMBOL_HOME</span>/..
+<span class="nv">DS_SERVER_HOME</span><span class="o">=</span><span class="nv">$FUNAMBOL_HOME</span>/ds-server
+<span class="k">fi</span>
+
+<span class="c1"># Setting the JAVA_HOME to the JRE in the bundle if not set or if not correctly set</span>
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$JAVA_HOME</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="nb">export</span> <span class="nv">JAVA_HOME</span><span class="o">=</span><span class="nv">$FUNAMBOL_HOME</span>/tools/jre-1.5.0/jre
+<span class="k">else</span>
+<span class="k">if</span> <span class="o">[</span> ! -f <span class="s2">&#34;</span><span class="nv">$JAVA_HOME</span><span class="s2">/bin/java</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="nb">export</span> <span class="nv">JAVA_HOME</span><span class="o">=</span><span class="nv">$FUNAMBOL_HOME</span>/tools/jre-1.5.0/jre
+<span class="k">fi</span>
+<span class="k">fi</span>
+
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$JAVA_HOME</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="nb">echo</span> “Please, <span class="nb">set</span> JAVA_HOME before running this script.”
+<span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="k">if</span> <span class="o">[</span> ! -f <span class="s2">&#34;</span><span class="nv">$JAVA_HOME</span><span class="s2">/bin/java</span><span class="s2">&#34;</span> <span class="o">]</span>
+<span class="k">then</span>
+<span class="nb">echo</span> “Please <span class="nb">set</span> JAVA_HOME to the path of a valid jre.”
+exit<span class="p">;</span>
+<span class="k">fi</span>
+
+<span class="nb">export</span> <span class="nv">J2EE_HOME</span><span class="o">=</span><span class="si">${</span><span class="nv">FUNAMBOL_HOME</span><span class="si">}</span>/tools/tomcat
+<span class="nb">export</span> <span class="nv">CATALINA_HOME</span><span class="o">=</span><span class="si">${</span><span class="nv">FUNAMBOL_HOME</span><span class="si">}</span>/tools/tomcat
+
+<span class="nb">cd</span> <span class="si">${</span><span class="nv">FUNAMBOL_HOME</span><span class="si">}</span>
+
+<span class="nb">export</span> <span class="nv">LANG</span><span class="o">=</span>en_US.utf-8
+
+<span class="nb">cd</span> <span class="si">${</span><span class="nv">J2EE_HOME</span><span class="si">}</span>/bin
+
+<span class="nv">COMED</span><span class="o">=</span><span class="nb">true</span>
+
+<span class="k">case</span> <span class="nv">$1</span> in
+start<span class="o">)</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$COMED</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;true&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+#
+<span class="c1"># Run Hypersonic</span>
+#
+sh <span class="nv">$FUNAMBOL_HOME</span>/bin/hypersonic start &gt; /dev/null
+<span class="k">fi</span>
+
+#
+<span class="c1"># Run CTP Server</span>
+#
+sh <span class="nv">$FUNAMBOL_HOME</span>/bin/ctp-server start &gt; /dev/null
+
+#
+<span class="c1"># Run DS Server</span>
+#
+sh <span class="nv">$FUNAMBOL_HOME</span>/bin/funambol-server start &gt; /dev/null
+
+#
+<span class="c1"># Run Inbox Listener</span>
+#
+sh <span class="nv">$FUNAMBOL_HOME</span>/bin/inbox-listener start &gt; /dev/null
+
+#
+<span class="c1"># Run Pim Listener</span>
+#
+sh <span class="nv">$FUNAMBOL_HOME</span>/bin/pim-listener start &gt; /dev/null
+<span class="p">;</span><span class="p">;</span>
+stop<span class="o">)</span>
+#
+<span class="c1"># Shutdown Inbox Listener</span>
+#
+sh <span class="nv">$FUNAMBOL_HOME</span>/bin/inbox-listener stop &gt; /dev/null
+
+#
+<span class="c1"># Shutdown Pim Listener</span>
+#
+sh <span class="nv">$FUNAMBOL_HOME</span>/bin/pim-listener stop &gt; /dev/null
+
+#
+<span class="c1"># Shutdown Tomcat</span>
+#
+sh <span class="nv">$FUNAMBOL_HOME</span>/bin/funambol-server stop &gt; /dev/null
+
+#
+<span class="c1"># Shutdown CTP Server</span>
+#
+sh <span class="nv">$FUNAMBOL_HOME</span>/bin/ctp-server stop &gt; /dev/null
+
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$COMED</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;true&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+#
+<span class="c1"># Shutdown Hypersonic</span>
+#
+sh <span class="nv">$FUNAMBOL_HOME</span>/bin/hypersonic stop &gt; /dev/null
+<span class="k">fi</span>
+<span class="p">;</span><span class="p">;</span>
+license<span class="o">)</span>
+less “<span class="si">${</span><span class="nv">FUNAMBOL_HOME</span><span class="si">}</span>/LICENSE.txt”
+<span class="p">;</span><span class="p">;</span>
+*<span class="o">)</span>
+<span class="nb">echo</span> “usage: <span class="nv">$0</span> <span class="o">[</span>start<span class="p">|</span>stop<span class="p">|</span>license<span class="o">]</span>”
+<span class="p">;</span><span class="p">;</span>
+<span class="k">esac</span></code></pre></div>
+<p>And finally let's update rc:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ update-rc.d funambol defaults</code></pre></div>
+<p>At this point, we can start and stop Funambol using following commands:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ /etc/init.d/funambol start 
+$ /etc/init.d/funambol stop</code></pre></div>
+<p>Now we have two ways to configure Funambol:</p>
+<ol>
+<li>editing /opt/Funambol/config/Funambol.xml with our favorite editor or</li>
+<li>using Funambol Administration tool available for<a href="http://downloads.sourceforge.net/project/funambol/admin-tool/v10/funambol-admin-10.0.0.tgz">Linux</a> or <a href="http://downloads.sourceforge.net/project/funambol/admin-tool/v10/funambol-admin-10.0.0.exe">Windows</a>.</li>
+</ol>
+
+            </div>
+            
+            <div class="post-comments">
+                
+<div id="disqus_thread"></div>
+<script type="text/plain" class="_iub_cs_activate">
+
+(function() {
+    // Don't ever inject Disqus on localhost--it creates unwanted
+    // discussions from 'localhost:1313' on your Disqus account...
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'daredevel';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2019 Valerio Galano -
+	<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme
+</span> -
+<a href="https://www.iubenda.com/privacy-policy/521121" class="iubenda-nostyle no-brand iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+</p>
+</footer>
+
+    </body>
