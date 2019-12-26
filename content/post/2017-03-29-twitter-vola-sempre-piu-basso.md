@@ -20,7 +20,7 @@ Non siamo di certo in un periodo d'oro per il social network piumato che nonstan
 
 L'azzurro volatile, infatti, soffre più o meno da sempre di uno scarso interesse da parte degli inserzionisti e questo, ovviamente, si traduce in un [continuo declino dal punto di vista economico][1].
 
-{{< figure src="/andamento-twitter-al-09-03-2017.png" caption="Andamento delle azioni di Twitter negli ultimi 5 anni" >}}
+{{< figure src="/img/andamento-twitter-al-09-03-2017.png" caption="Andamento delle azioni di Twitter negli ultimi 5 anni" >}}
 
 Le cause di questo problema sono da ricercare, in prima battuta, nel fatto che le inserzioni pubblicitarie di Twitter raggiungono indubbiamente pochi utenti e, quando lo fanno, risultano poco coinvolgenti e non sembrano avere riscontro nei click dei fruitori del social. Neanche i tentativi di migliorare il sistema dal punto di vista tecnico, come l'introduzione dell'acquisto diretto dei prodotti e la messa in evidenza dei contenuti sponsorizzati, sembrano aver sortito effetti significativi sull'andamento delle inserzioni.
 

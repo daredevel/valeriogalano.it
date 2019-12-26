@@ -24,7 +24,7 @@ Quello che però in molti non sanno, o dimenticano spesso, è che questi grandi 
 
 Per questo motivo, in un periodo storico in cui sempre più utenti iniziano ad acquisire consapevolezza della propria _digital footprint_, il discreto motore di ricerca chiamato [DuckDuckGo][7] ha visto [crescere vertiginosamente i propri utilizzatori][1].
 
-{{< figure src="/duckduckgo-10-billion-searches-counts.png" title="Crescita del numero di ricerche effettuate con DuckDuckGo nel corso degli anni." caption="[Fonte](https://spreadprivacy.com/10-billion-fc7808c91343)" >}}
+{{< figure src="/img/duckduckgo-10-billion-searches-counts.png" title="Crescita del numero di ricerche effettuate con DuckDuckGo nel corso degli anni." caption="[Fonte](https://spreadprivacy.com/10-billion-fc7808c91343)" >}}
 
 DuckDuckGo, infatti, si autodefinisce _Il motore di ricerca che non ti traccia_ e ha come principale caratteristica quella di **non raccogliere alcun tipo di informazione riguardante i propri utenti**.
 
@@ -40,7 +40,7 @@ Dal punto di vista delle prestazioni, invece, oltre alle classiche funzioni di r
 
 Innanzitutto, nel caso in cui fossimo interessati a svolgere una ricerca all'interno di uno specifico sito (ad esempio Amazon, eBay, Youtube, ecc.), il motore ci mete a disposizione i [Bang][2]. Ci basta, infatti, digitare un punto esclamativo nel campo di ricerca per avere immediatamente accesso alla ricerca diretta su migliaia di siti.
 
-{{< figure src="/duckduckgo-bang.png" title="Anteprima Bang DuckDuckGo" caption="[Anteprima Bang DuckDuckGo](https://spreadprivacy.com/10-billion-fc7808c91343)" >}}
+{{< figure src="/img/duckduckgo-bang.png" title="Anteprima Bang DuckDuckGo" caption="[Anteprima Bang DuckDuckGo](https://spreadprivacy.com/10-billion-fc7808c91343)" >}}
 
 Digitando ad esempio _!a scarpe_ effettueremo una ricerca direttamente su Amazon della parola _scarpe_. Digitando invece _!e orologi_, cercheremo degli orologi su eBay e così via...
 

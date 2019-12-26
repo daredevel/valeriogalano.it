@@ -35,7 +35,7 @@ In secondo luogo, tutte le comunicazioni sono pesantemente criptate rendendo cos
 
 I programmatori di Telegram, infatti, sono così convinti della sicurezza del proprio sistema da organizzare un concorso e offrire un premio di $200,000 a chiunque sia in grado di "bucare" il protocollo e leggere dei messaggi in modo non autorizzato.
 
-{{< figure src="/Telegram-contest.png" alt="Telegram-contest" >}}
+{{< figure src="/img/Telegram-contest.png" alt="Telegram-contest" >}}
 
 ## E cosa sta causando questo esodo di massa da WhatsApp verso Telegram?
 

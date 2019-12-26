@@ -27,27 +27,27 @@ La novità sicuramente più interessante riguarda l'aggiornamento di TinyMCE, l'
 
 Innanzitutto, da ora è possibile caricare un file trascinandolo dal desktop direttamente nell'editor. Diventa, inoltre, più semplice la gestione dei dettagli, della posizione ed del ritaglio/ridimensionamento delle immagini.
 
-{{< figure src="https://valeriogalano.it/wp-content/uploads/2015/06/wordpress-3.9-image-details.png" alt="wordpress-3.9-image-details"  >}}
+{{< figure src="/img/wordpress-3.9-image-details.png" alt="wordpress-3.9-image-details"  >}}
 
-{{< figure src="https://valeriogalano.it/wp-content/uploads/2015/06/wordpress-3.9-image-edit.png" alt="wordpress-3.9-image-edit"  >}}
+{{< figure src="/img/wordpress-3.9-image-edit.png" alt="wordpress-3.9-image-edit"  >}}
 
 ## Audio/Video Playlist
 
 Con questa nuova versione, viene introdotta la funzionalità Playlist che permetterà all'utente di creare delle scalette di file audio o video da riprodurre in una pagina o in un articolo. Il funzionamento della playlist è fondamentalmente simile a quello della già consolidata galleria di immagini.
 
-{{< figure src="https://valeriogalano.it/wp-content/uploads/2015/06/wordpress-3.9-playlist.png" alt="wordpress-3.9-playlist"  >}}
+{{< figure src="/img/wordpress-3.9-playlist.png" alt="wordpress-3.9-playlist"  >}}
 
 ## Anteprima Widget
 
 Nella sezione di personalizzazione del tema, è ora disponibile una funzione che permette di inserire widget direttamente e visualizzare in anteprima l'effetto che tale inserimtento avrà sul nostro sito.
 
-{{< figure src="https://valeriogalano.it/wp-content/uploads/2015/06/wordpress-3.9-widget-preview.png" alt="wordpress-3.9-widget-preview"  >}}
+{{< figure src="/img/wordpress-3.9-widget-preview.png" alt="wordpress-3.9-widget-preview"  >}}
 
 ## Migliorato menu di installazione temi
 
 Tra le principali migliorie, troviamo, inoltre, il nuovo sistema di ricerca è installazione temi che ora mostra un aspetto molto più accattivante ed intuitivo.
 
-{{< figure src="http://www.daredevel.com/uploads/wordpress-3.9-add-theme.png" alt="wordpress-3.9-add-theme" >}}
+{{< figure src="/img/wordpress-3.9-add-theme.png" alt="wordpress-3.9-add-theme" >}}
 
 ## Implementate MySQLi e riscritta funzione Autosave
 

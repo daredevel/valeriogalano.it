@@ -44,7 +44,7 @@ On the other hand, as written on [Supervisor homepage][3]:
 
 Actually, combination of Gearman and Supervisor creates a **stable, flexible** and **scalable** infrastructure to handle all our jobs. As shown in the following diagram, it provides us a client/server structure and cares about communication and (if we want) distribution. We only need to take care of code to complete our tasks.
 
-{{< figure title="Gearman stack" src="/gearman_stack.png" alt="Gearman stack" >}}
+{{< figure title="Gearman stack" src="/img/gearman_stack.png" alt="Gearman stack" >}}
 
 ## Installation
 

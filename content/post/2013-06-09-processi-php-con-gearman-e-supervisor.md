@@ -44,7 +44,7 @@ D'altra parte, come scritto sulla [homepage di Supervisor][3]:
 
 In pratica, la combinazione di Gearman e Supervisor crea una infrastruttura **stabile**, **flessibile** e **scalabile** per gestire i nostri jobs. Come mostrato nel seguente schema, essa ci fornisce una struttura client/server e si occupa della comunicazione e (volendo) della distribuzione. Noi dobbiamo solo aver cura di scrivere il codice per eseguire le nostre operazioni.
 
-{{< figure title="Gearman stack" src="/gearman_stack.png" alt="Gearman stack" >}}
+{{< figure title="Gearman stack" src="/img/gearman_stack.png" alt="Gearman stack" >}}
 
 ## Installazione
 

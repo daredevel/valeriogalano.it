@@ -3,16 +3,16 @@ title = "Valerio Galano - Software developer"
 #theme = "ananke"
 theme = "hugo-theme-nix"
 languageCode = "it-it"
-#disqusShortname = "daredevel"
+disqusShortname = "daredevel"
 pygmentsUseClasses=true
 
 [menu]
   [[menu.header]]
-    name = "post"
+    name = "blog"
     weight = 1
     url = "/post"
   [[menu.header]]
-    name = "pensieriInCodice-podcast"
+    name = "podcast"
     weight = 2
     url = "https://pensieriincodice.it/"
 #  [[menu.header]]
@@ -44,8 +44,8 @@ pygmentsUseClasses=true
   HeaderHostname = "daredevel"
   Email = "v.galano@daredevel.com"
   About = "Prometto che al più presto mi fermerò un attimo e mi prenderò qualche minuto per pensare ad una descrizione da mettere in questo box. Nel fattempo, in alto tovi i collegamenti al mio blog e al mio podcast. Buon divertimento!"
-  ProfilePicture = "/profile.jpg"
-  Favicon = "/favicon.ico"
+  ProfilePicture = "/img/profile.jpg"
+  Favicon = "/img/favicon.ico"
   Mobile = "+393803529774"
 
 [markup]
