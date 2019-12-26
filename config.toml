@@ -47,6 +47,9 @@ pygmentsUseClasses=true
   ProfilePicture = "/img/profile.jpg"
   Favicon = "/img/favicon.ico"
   Mobile = "+393803529774"
+  description = "Sviluppo software, back-end, api, bot, skills"
+  images = ["/img/profile.jpg"]
+  title = "Valerio Galano"
 
 [markup]
   defaultMarkdownHandler = "goldmark"
