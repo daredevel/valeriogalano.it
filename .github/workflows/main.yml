@@ -1,0 +1,20 @@
+name: Publish Website
+
+on: push
+
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: ftp.daredevel.com
+        FTP_USERNAME: v.galano@daredevel.com
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCAL_DIR: ./public/
+        REMOTE_DIR:  /addondomain/valeriogalano.it
+        ARGS: --delete
+        # --delete arg will delete files on the server if you've deleted them in git
