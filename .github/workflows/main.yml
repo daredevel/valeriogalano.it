@@ -1,14 +1,29 @@
 name: Publish Website
 
-on: push
-
+on:
+  push:
+    branches:
+    - master
+    
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  Deploy-Action:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: FTP-Deploy-Action
+
+    - uses: actions/checkout@v1
+      # with:
+      #   submodules: true
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.61.0'
+        # extended: true
+
+    - name: Build
+      run: hugo --minify
+
+    - name: Deploy
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
         FTP_SERVER: ftp.daredevel.com
