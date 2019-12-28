@@ -4,7 +4,7 @@ on:
   push:
     branches:
     - master
-    
+
 jobs:
   Deploy-Action:
     runs-on: ubuntu-latest
@@ -17,11 +17,11 @@ jobs:
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: '0.61.0'
+        hugo-version: '0.62.0'
         # extended: true
 
     - name: Build
-      run: hugo --minify
+      run: hugo -D
 
     - name: Deploy
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
