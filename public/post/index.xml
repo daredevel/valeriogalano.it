@@ -6,20 +6,10 @@
     <description>Recent content in Posts on Valerio Galano - Software developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>it-it</language>
-    <lastBuildDate>Mon, 07 Jan 2019 09:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 Dec 2017 10:00:05 +0000</lastBuildDate>
     
 	<atom:link href="https://valeriogalano.it/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>How to add Iubenda prior blocking of cookie scripts to Hugo Disqus shortcode</title>
-      <link>https://valeriogalano.it/post/2020-01-07-/</link>
-      <pubDate>Mon, 07 Jan 2019 09:00:00 +0000</pubDate>
-      
-      <guid>https://valeriogalano.it/post/2020-01-07-/</guid>
-      <description>In recent days, I worked to convert my Wordpress-based personal website in a static blog created using Hugo framework. The result is the blog you are reading now. I made this decision because I was bored to continously update and take care of a complete Wordpress instance with the purpose of keep online a simple personal blog. But this is another story&amp;hellip;
-Anyway, I discovered Hugo Framework at the suggestion of my friend Giuseppe Pugliese (Magnetarman) and, after some scouting on official documentation, I understood that it was what I was looking for.</description>
-    </item>
     
     <item>
       <title>Perché la Net Neutrality ci riguarda tutti?</title>
