@@ -11,15 +11,15 @@ categories:
   - Tutorials
 ---
 
-In recent days, I worked to convert my Wordpress-based personal website to a static blog created using Hugo framework. The result is the blog you are reading now. I made this decision because I was bored to continously update and take care of a complete Wordpress instance with the purpose of keep online a simple personal blog. But this is another story...
+In recent days, I worked to convert my Wordpress-based personal website to a static blog created using Hugo framework. The result of this conversion is the blog you are reading at the moment. I made this decision because I was bored to continously update and take care of a complete Wordpress instance with the purpose of keep online a simple personal blog. But this is another story...
 
-Anyway, I discovered [Hugo Framework][1] at the suggestion of my friend [Giuseppe Pugliese (Magnetarman)][8] and, after some scouting on [official documentation][2], I understood that it was what I was looking for. Hugo is a fast and simple framework to build websites.
+Anyway, I discovered [Hugo Framework][1] at the suggestion of my friend [Giuseppe Pugliese (Magnetarman)][8] and, after some scouting on [official documentation][2], I understood that Hugo was what I was looking for: a fast and simple framework to build websites.
 
-As written in [home page][1]:
+As written in official [home page][1]:
 
 > Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.
 
-Hugo framework includes some important features like mobile responsive themes, blog posts, simple content management, support for youtube, twitter, instagram. As you setup aspect you prefer and feed it with your contents, Hugo can compile them in a static websites that need no maintenance effort and are very secure.
+Hugo framework includes some important features like mobile responsive themes, blog posts, simple content management, support for Youtube, Twitter, Instagram, etc.. As you setup aspect you prefer and feed it with your contents, Hugo can compile them in a static websites that need no maintenance effort and are very secure.
 
 In my case, it tooks less than 2 hours to understand how framework works and about 4 hours to convert my old website in his Hugo alter ego. I used a Wordpress plugin converter that worked not so well and made me waste some time, but I still was happy until...
 
@@ -31,20 +31,27 @@ My Privacy and Cookie policy is implemented using [Iubenda][5] service and is ac
 
 With *prior blocking*, if user doesn't accept cookies, Iubenda blocks the various service so they can't create cookies.
 
-To have this feature in my new website I had to solve some problems and make some customization to default Hugo's theme. So, since I can't find relevant tutorials online about this, I decided to write some articles about Iubenda's integration in Hugo websites. Each article will be about a different service. This one is about Disqus integration. 
+To have this feature in my new website I had to solve some problems and make some customization to Hugo's theme. So, since I can't find relevant tutorials online about this, I decided to write some articles about Iubenda's integration in Hugo websites. Each article will be about a different service and this one is about Disqus integration. 
 
 [Disqus][7] is a blog comment hosting service. It has a lot of feature, is very common worldwide and Hugo has a native mechanism to integrate it in posts.
 
-In this article we will see how to **add Iubenda prior blocking to Disqus cookies**.
+In this article we will see how to *add Iubenda prior blocking to Disqus cookies*.
 
-Please, note: following code examples will be shown assuming you have a working Hugo website project, setup using [official quickstart guide][4] and equipped with **ananke** theme (default theme suggested in quickstart guide) and Iubenda Privacy and Cookie policy correctly integrated.
+**Please, note**: following code examples will be shown assuming you have a *working Hugo website project*, setup using [official quickstart guide][4] and equipped with *ananke* theme (default theme suggested in quickstart guide) and *Iubenda Privacy and Cookie policy correctly embedded*. If you (as probably) are using a different Hugo theme, please, keep in mind that you shoud adapt something to your specific needs.
 
-### Step 1: Prepare partial Disqus shortcode template
 To allow Iubenda to block cookies, we need to add `class="_iub_cs_activate"` to `<script>` tag as reported in [manual tagging documentation][6]. 
 
 Hugo handles Disqus code like an _internal template_, so, to customize it, we need to create a new _partial template_ and replace each Disqus internal output.
 
-So, let's create a new file named **layouts/partials/disqus.html** and put in some content like:
+So let's follow these steps:
+1. Prepare a custom _partial template output_ for Disqus shortcode
+2. Find rows in which our theme calls Disqus shortcode's _internal template output_
+3. Replace each call with a call to our _partial template output_
+4. Check result
+
+### Step 1: Prepare partial Disqus shortcode template
+
+To create a partial template, let's create a new file named **layouts/partials/disqus.html** and put in some content like:
 
 {{< highlight html "linenos=true,hl_lines=2" >}}
 
@@ -68,11 +75,13 @@ So, let's create a new file named **layouts/partials/disqus.html** and put in so
 
 {{</ highlight >}}
 
-### Step 2: Replace Disqus _internal template output_ with _partial template output_
+### Step 2: Find calls to Disqus shortcode's _internal template output_
 
 Now we need to replace default disqus code with our custom template. To do this, let's fisrt find string `{{ template "_internal/disqus.html" . }}` in Hugo theme.
 
 In our example theme (ananke), we will find it in file `themes/ananke/layouts/_default/single.html`.
+
+### Step 3: Replace Disqus _internal template output_ with _partial template output_
 
 Once we find file(s) containing the string, we simply need to move theme under project layout/ folder and replace each `{{ template "_internal/disqus.html" . }}` with `{{ partial "disqus.html" . }}` like in following file.
 
