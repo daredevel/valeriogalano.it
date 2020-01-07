@@ -2,7 +2,7 @@
 title: How to add Iubenda prior blocking of cookie scripts to Hugo Disqus shortcode 
 author: Valerio Galano
 type: post
-date: 2020-01-07T08:00:00+00:00
+date: 2020-01-07T06:00:00+00:00
 tags: 
   - Hugo
   - Iubenda
