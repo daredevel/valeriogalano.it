@@ -8,17 +8,9 @@ pygmentsUseClasses=true
 
 [menu]
   [[menu.header]]
-    name = "blog"
+    name = "daredevel"
     weight = 1
-    url = "/post"
-  [[menu.header]]
-    name = "podcast"
-    weight = 2
-    url = "https://pensieriincodice.it/"
-#  [[menu.header]]
-#    name = "daredevel-blog"
-#    weight = 2
-#    url = "https://daredevel.com/"
+    url = "/daredevel"
 #  [[menu.header]]
 #    name = "about"
 #    weight = 1
