@@ -1,0 +1,197 @@
+---
+title: Continous deploying via FTP of Hugo-based Website with Github Actions
+author: Valerio Galano
+type: post
+date: 2020-02-11T07:00:00+01:00
+tags: 
+  - Hugo
+  - Github Actions
+categories:
+  - Tutorials
+---
+
+At the end of 2019 I discovered [Hugo Framework][1], I started refactoring my personal websites and writing some posts about some solutions I had to implement to accomplish features I was wondering for. You can find more details in post [How to add Iubenda prior blocking of cookie scripts to Hugo Disqus shortcode].
+
+My website is deployed on an Italian Hosting server. Every time I decide to make a change or add a post, I needed to manually re-compile website and deploy files via FTP.
+
+This was very annoing.
+
+To resolve this issue I decided to implement some continous integration using [Github Actions].
+
+My job to deploy Hugo via FTP is compsed by following steps:
+ * Checkout project code
+ * Build static website with Hugo
+ * Deploy static code to FTP
+
+This job must be triggered everytime I commit a change to git.
+
+Let's see how to implement it.
+
+## Step 1: Checkout project code
+
+First step consists in download project code from github. In my case, I also need to download hugo theme as submodule.
+
+{{< highlight yaml "linenos=true" >}}
+
+
+    - uses: actions/checkout@v1
+      with:
+        submodules: true
+
+
+{{</ highlight >}}
+
+## Step 2: Build static website with Hugo
+
+Second step is about Hugo build. To do this, let's use a custom action found in Github Actions Marketplace: [Hugo setup].
+
+{{< highlight yaml "linenos=true" >}}
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.62.0'
+
+    - name: Build
+      run: hugo -D
+
+{{</ highlight >}}
+
+## Step 3: Deploy static code to FTP
+
+As third step, we simply have to move generated static website to a remote FTP folder. The action I choosed to do this is [FTP Deploy].
+
+{{< highlight yaml "linenos=true" >}}
+
+    - name: Deploy
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: ftp.myhosting.com
+        FTP_USERNAME: myusername
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCAL_DIR: ./public/
+        REMOTE_DIR:  /path/to/site/root/on/my/hosting/
+        ARGS: --delete # will delete files on the server if you've deleted them in git
+
+{{</ highlight >}}
+
+FTP password value must be stored in Github secret called FTP_PASSWORD for security reasons like in in following image:
+
+{{< figure src="/img/github-secrets.png" alt="Github secrets settings panel" >}}
+
+## Trigger job
+
+With following rows, we can specify to Github to run action **at push event** on **master branch**:
+
+{{< highlight yaml "linenos=true" >}}
+
+name: Publish
+
+on:
+  push:
+    branches:
+    - master
+
+{{</ highlight >}}
+
+## Put all together
+
+To make it work, let's put all code together in file **.github/workflows/main.yml**:
+
+{{< highlight yaml "linenos=true" >}}
+
+name: Publish
+
+on:
+  push:
+    branches:
+    - master
+  schedule:
+    - cron:  '0 8 * * *'
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v1
+      with:
+        submodules: true
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.62.0'
+
+    - name: Build
+      run: hugo -D
+
+    - name: Deploy
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: ftp.myhosing.com
+        FTP_USERNAME: myusername
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCAL_DIR: ./public/
+        REMOTE_DIR:  /path/to/site/root/on/my/hosting/
+        ARGS: --delete # will delete files on the server if you've deleted them in git
+
+{{</ highlight >}}
+
+## BOUNS: automatically publish scheduled posts
+
+A post written in Hugo with date in future is not builded in static version of the website. On the other hand, Github action can be scheduled to run periodically with a cron-like mechanism.
+
+Using this two behaviours, you can commit posts using date field to schedule it.
+
+You simply have to configure job execution like following (line 7-8) and commit posts with datetime in which you want schedule them.
+
+In this way, Github will periodically rebuild you site until posts will appear at defined time.
+
+{{< highlight yaml "linenos=true,hl_lines=7-8" >}}
+
+name: Publish
+
+on:
+  push:
+    branches:
+    - master
+  schedule:
+    - cron:  '0 8 * * *'
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v1
+      with:
+        submodules: true
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.62.0'
+
+    - name: Build
+      run: hugo -D
+
+    - name: Deploy
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: ftp.myhosting.com
+        FTP_USERNAME: myusername
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCAL_DIR: ./public/
+        REMOTE_DIR:  /path/to/site/root/on/my/hosting/
+        ARGS: --delete # will delete files on the server if you've deleted them in git
+
+{{</ highlight >}}
+
+[1]: https://gohugo.io/
+[2]: https://gohugo.io/getting-started/quick-start/
+[3]: https://github.com/
+[How to add Iubenda prior blocking of cookie scripts to Hugo Disqus shortcode]: {{< relref "2020-01-07-how-to-add-iubenda-prior-blocking-of-cookie-scripts-to-hugo-disqus-shortcode.md" >}}
+[Github Actions]: https://github.com/features/actions
+[Hugo setup]: https://github.com/marketplace/actions/hugo-setup
+[FTP Deploy]: https://github.com/marketplace/actions/ftp-deploy
