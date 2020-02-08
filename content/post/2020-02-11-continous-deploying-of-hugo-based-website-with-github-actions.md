@@ -12,24 +12,26 @@ categories:
 
 At the end of 2019 I discovered [Hugo Framework][1], I started refactoring my personal websites and writing some posts about some solutions I had to implement to accomplish features I was wondering for. You can find more details in post [How to add Iubenda prior blocking of cookie scripts to Hugo Disqus shortcode].
 
-My website is deployed on an Italian Hosting server. Every time I decide to make a change or add a post, I needed to manually re-compile website and deploy files via FTP.
+My website is deployed on an Italian Hosting server, so every time I decide to make a change or add a post, I needed to manually re-compile website and upload files via FTP.
 
 This was very annoing.
 
 To resolve this issue I decided to implement some continous integration using [Github Actions].
 
 My job to deploy Hugo via FTP is compsed by following steps:
- * Checkout project code
+ * Checkout git project code
  * Build static website with Hugo
- * Deploy static code to FTP
+ * Deploy static website to FTP
 
 This job must be triggered everytime I commit a change to git.
 
 Let's see how to implement it.
 
-## Step 1: Checkout project code
+Please note: in following description I'll assume you know how to use Github, Hugo and FTP hosting.
 
-First step consists in download project code from github. In my case, I also need to download hugo theme as submodule.
+## Step 1: Checkout git project code
+
+First step consists in download project code from github. In my case, I also need to download hugo theme as submodule. Code needed to do this, is following:
 
 {{< highlight yaml "linenos=true" >}}
 
@@ -57,7 +59,7 @@ Second step is about Hugo build. To do this, let's use a custom action found in 
 
 {{</ highlight >}}
 
-## Step 3: Deploy static code to FTP
+## Step 3: Deploy static website to FTP
 
 As third step, we simply have to move generated static website to a remote FTP folder. The action I choosed to do this is [FTP Deploy].
 
@@ -75,7 +77,7 @@ As third step, we simply have to move generated static website to a remote FTP f
 
 {{</ highlight >}}
 
-FTP password value must be stored in Github secret called FTP_PASSWORD for security reasons like in in following image:
+FTP password value must be stored in **Github secrets panel** for security reasons like in in following image:
 
 {{< figure src="/img/github-secrets.png" alt="Github secrets settings panel" >}}
 
@@ -96,7 +98,7 @@ on:
 
 ## Put all together
 
-To make it work, let's put all code together in file **.github/workflows/main.yml**:
+To make it work, let's put all code together in file **.github/workflows/main.yml** of your Github project:
 
 {{< highlight yaml "linenos=true" >}}
 
