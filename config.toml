@@ -7,22 +7,29 @@ disqusShortname = "daredevel"
 pygmentsUseClasses=true
 
 [menu]
-  [[menu.header]]
-    name = "daredevel"
-    weight = 1
-    url = "/daredevel"
+#  [[menu.header]]
+#    name = "blog"
+#    weight = 1
+#    url = "/posts"
 #  [[menu.header]]
 #    name = "about"
 #    weight = 1
 #    url = "/about"
-#  [[menu.header]]
-#    parent = "/post"
-#    name = "categories"
-#    url = "/categories"
-#  [[menu.header]]
-#    parent = "/post"
-#    name = "tags"
-#    url = "/tags"
+  [[menu.header]]
+    parent = "blog"
+    name = "posts"
+    weight = 1
+    url = "/daredevel"
+  [[menu.header]]
+    parent = "blog"
+    name = "categories"
+    weight = 2
+    url = "/categories"
+  [[menu.header]]
+    parent = "blog"
+    name = "tags"
+    weight = 3
+    url = "/tags"
 
 [params]
   GithubID = "daredevel"
