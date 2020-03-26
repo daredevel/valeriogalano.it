@@ -28,7 +28,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:
         FTP_SERVER: ftp.daredevel.com
-        FTP_USERNAME: v.galano@daredevel.com
+        FTP_USERNAME: valeriogalano.it@daredevel.com
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: ./public/
         REMOTE_DIR:  /addondomain/valeriogalano.it
