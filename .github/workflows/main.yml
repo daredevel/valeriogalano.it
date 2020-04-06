@@ -12,9 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v1
       with:
-        fetch-depth: 2
+        submodules: true
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
