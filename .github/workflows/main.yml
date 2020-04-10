@@ -30,4 +30,4 @@ jobs:
         ftp-server: ftp://ftp.daredevel.com/
         ftp-username: ftp_website@valeriogalano.it
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./public/
+        local-dir: public/
