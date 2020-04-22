@@ -26,9 +26,10 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 <IfModule mod_rewrite.c>
-  RewriteEngine On 
-  Redirect /newsletter   https://daredevel.com/email/?p=subscribe
-  Redirect /newsletter/  https://daredevel.com/email/?p=subscribe
+  Options +FollowSymLinks
+  RewriteEngine On
+  Redirect 301 /newsletter  https://daredevel.com/newsletter/?p=subscribe
+  Redirect 301 /newsletter/ https://daredevel.com/newsletter/?p=subscribe
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
