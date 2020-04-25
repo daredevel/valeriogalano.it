@@ -28,6 +28,7 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
   Options +FollowSymLinks
   RewriteEngine On
+  Redirect 301 /3cz67VI https://amzn.to/3cz67VI # Web Design Adattivo
   Redirect 301 /newsletter  https://daredevel.com/newsletter/?p=subscribe
   Redirect 301 /newsletter/ https://daredevel.com/newsletter/?p=subscribe
   RewriteCond %{HTTPS} off
