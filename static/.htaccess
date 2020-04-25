@@ -28,9 +28,13 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
   Options +FollowSymLinks
   RewriteEngine On
-  Redirect 301 /3cz67VI https://amzn.to/3cz67VI # Web Design Adattivo
-  Redirect 301 /newsletter  https://daredevel.com/newsletter/?p=subscribe
-  Redirect 301 /newsletter/ https://daredevel.com/newsletter/?p=subscribe
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
+
+Redirect 301 /newsletter  https://daredevel.com/newsletter/?p=subscribe
+Redirect 301 /newsletter/ https://daredevel.com/newsletter/?p=subscribe
+
+Redirect 301 /31GPkdn https://amzn.to/3cQletR # Amazon home
+Redirect 301 /360s8Kx https://amzn.to/2W0KLK8 # Amazon wishlist
+Redirect 301 /3cz67VI https://amzn.to/3cz67VI # Web Design Adattivo
