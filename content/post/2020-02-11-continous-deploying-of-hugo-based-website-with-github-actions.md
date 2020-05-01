@@ -10,6 +10,8 @@ categories:
   - Tutorials
 ---
 
+**UPDATE 2020-05-01: Some weeks after this post was published, SamKirkland released version 3 of FTP-Deploy-Action. So I updated code snippets. Old version of this post is available on [archive.is](https://archive.is/wip/LuO59 "archived version of Continous deploying via FTP of Hugo-based Website with Github Actions")**
+
 At the end of 2019 I discovered [Hugo Framework][1], I started refactoring my personal websites and writing some posts about some solutions I had to implement to accomplish features I was wondering for. You can find more details in post [How to add Iubenda prior blocking of cookie scripts to Hugo Disqus shortcode].
 
 My website is deployed on an Italian Hosting server, so every time I decide to make a change or add a post, I needed to manually re-compile website and upload files via FTP.
@@ -66,14 +68,12 @@ As third step, we simply have to move generated static website to a remote FTP f
 {{< highlight yaml "linenos=true" >}}
 
     - name: Deploy
-      uses: SamKirkland/FTP-Deploy-Action@2.0.0
-      env:
-        FTP_SERVER: ftp.myhosting.com
-        FTP_USERNAME: myusername
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        LOCAL_DIR: ./public/
-        REMOTE_DIR:  /path/to/site/root/on/my/hosting/
-        ARGS: --delete # will delete files on the server if you've deleted them in git
+      uses: SamKirkland/FTP-Deploy-Action@3.0.0
+      with:
+        ftp-server:  ftp.myhosting.com/path/to/site/root/on/my/hosting/
+        ftp-username: myusername
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: public/
 
 {{</ highlight >}}
 
@@ -129,14 +129,12 @@ jobs:
       run: hugo -D
 
     - name: Deploy
-      uses: SamKirkland/FTP-Deploy-Action@2.0.0
-      env:
-        FTP_SERVER: ftp.myhosing.com
-        FTP_USERNAME: myusername
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        LOCAL_DIR: ./public/
-        REMOTE_DIR:  /path/to/site/root/on/my/hosting/
-        ARGS: --delete # will delete files on the server if you've deleted them in git
+      uses: SamKirkland/FTP-Deploy-Action@3.0.0
+      with:
+        ftp-server:  ftp.myhosting.com/path/to/site/root/on/my/hosting/
+        ftp-username: myusername
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: public/
 
 {{</ highlight >}}
 
@@ -179,14 +177,12 @@ jobs:
       run: hugo -D
 
     - name: Deploy
-      uses: SamKirkland/FTP-Deploy-Action@2.0.0
-      env:
-        FTP_SERVER: ftp.myhosting.com
-        FTP_USERNAME: myusername
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        LOCAL_DIR: ./public/
-        REMOTE_DIR:  /path/to/site/root/on/my/hosting/
-        ARGS: --delete # will delete files on the server if you've deleted them in git
+      uses: SamKirkland/FTP-Deploy-Action@3.0.0
+      with:
+        ftp-server:  ftp.myhosting.com/path/to/site/root/on/my/hosting/
+        ftp-username: myusername
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: public/
 
 {{</ highlight >}}
 
