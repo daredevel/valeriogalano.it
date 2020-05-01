@@ -10,7 +10,7 @@ categories:
   - Tutorials
 ---
 
-**UPDATE 2020-05-01: Some weeks after this post was published, SamKirkland released version 3 of FTP-Deploy-Action. So I updated code snippets. Old version of this post is available on [archive.is](https://archive.is/wip/LuO59 "archived version of Continous deploying via FTP of Hugo-based Website with Github Actions")**
+**UPDATE 2020-05-01: Some weeks after this post was published, SamKirkland released version 3 of FTP-Deploy-Action. So I updated code snippets. Old version of this post is available on [archive.is](https://archive.is/wip/LuO59 "archived version of Continous deploying via FTP of Hugo-based Website with Github Actions").**
 
 At the end of 2019 I discovered [Hugo Framework][1], I started refactoring my personal websites and writing some posts about some solutions I had to implement to accomplish features I was wondering for. You can find more details in post [How to add Iubenda prior blocking of cookie scripts to Hugo Disqus shortcode].
 
