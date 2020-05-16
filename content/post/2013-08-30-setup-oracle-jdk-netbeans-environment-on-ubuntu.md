@@ -16,7 +16,7 @@ gallery_layout:
 trx_addons_post_views_count:
   - 59
 categories:
-  - Tutorials
+  - How-to guides
 
 ---
 In this post we will see how to setup a basic environment to develop Java applications on a Ubuntu Precise Pangolin. Normally this setup should be a very simple operation, anyway I had some trouble during process, so I decided to write down and describe all steps I followed to sort out.

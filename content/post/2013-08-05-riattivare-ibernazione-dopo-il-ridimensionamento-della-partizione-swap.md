@@ -11,7 +11,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 108
 categories:
-  - Tutorials
+  - How-to guides
 
 ---
 L'ibernazione può essere un funzionalità importante per molti utenti: essa permette di spegnere il PC ed ottenere, alla riaccensione, la sessione nello stesso identico stato di quando è stata arrestata (file aperti, applicazioni caricate, configurazioni modificate, terminali, ecc.).

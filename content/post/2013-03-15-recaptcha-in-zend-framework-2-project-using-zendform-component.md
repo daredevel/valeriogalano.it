@@ -12,9 +12,12 @@ gallery_layout:
   - tiled
 trx_addons_post_views_count:
   - 187
+tags:
+  - PHP
+  - Zend Framework 2
 categories:
   - PHP
-  - Tutorials
+  - How-to guides
 
 ---
 

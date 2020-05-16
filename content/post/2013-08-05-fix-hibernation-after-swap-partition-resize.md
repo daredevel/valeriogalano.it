@@ -11,7 +11,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 84
 categories:
-  - Tutorials
+  - How-to guides
 
 ---
 Hibernation can be an important feature for many users: it allows people to turn on the PC and get it in the exact state session of when it was turned off (open files, running applications, configurations edited, terminals, etc.).

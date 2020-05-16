@@ -15,9 +15,11 @@ gallery_layout:
   - tiled
 trx_addons_post_views_count:
   - 54
+tags:
+  - PHP
 categories:
   - PHP
-  - Tutorials
+  - How-to guides
 
 ---
 ## Problema

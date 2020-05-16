@@ -12,8 +12,11 @@ dsq_thread_id:
   - 5704979604
 trx_addons_post_views_count:
   - 63
+tags:
+  - PHP
+  - Zend Framework 3
 categories:
-  - News e approfondimenti
+  - News
   - PHP
 
 ---

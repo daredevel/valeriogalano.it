@@ -14,7 +14,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 861
 categories:
-  - Tutorials
+  - How-to guides
 
 ---
 Resize an image is a simple operation: there are many software able to do that. The most obvious are <a title="Gimp" href="http://www.gimp.org/" target="_blank" rel="noopener noreferrer">Gimp</a> or <a title="Photoshop" href="http://www.photoshop.com/" target="_blank" rel="noopener noreferrer">Photoshop</a>. But what's the right procedure to resize lots of images?

@@ -12,9 +12,12 @@ dsq_thread_id:
   - 5723097250
 trx_addons_post_views_count:
   - 551
+tags:
+  - PHP
+  - Zend Framework 3
 categories:
   - PHP
-  - Tutorials
+  - How-to guides
 
 ---
 Sometimes in our Zend Framework 3 multi-language application, we could need to access to Zend Translator component directly from Controllers. For example, when we have to translate a string to return in a JsonModel.

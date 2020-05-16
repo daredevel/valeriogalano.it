@@ -14,7 +14,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 54
 categories:
-  - News e approfondimenti
+  - Approfondimenti
 
 ---
 Il 20 Febbraio 2014, Facebook ha annunciato l'acquisto della famosissima applicazione per smartphone WhatsApp per la modica cifra di 19 miliardi di dollari.

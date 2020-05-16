@@ -16,7 +16,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 49
 categories:
-  - News e approfondimenti
+  - Approfondimenti
 
 ---
 Negli ultimi anni l'utilizzo di servizi in Cloud si è diffuso con sorprendente velocità anche in Italia. Sempre più utenti ed aziende sfruttano gli enormi vantaggi dati dall'impiego di questa nuova tecnoligia.

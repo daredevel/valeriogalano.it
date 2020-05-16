@@ -7,7 +7,7 @@ url: /tutorials/create-and-edit-pdf-documents-with-libreoffice/
 trx_addons_post_views_count:
   - 48
 categories:
-  - Tutorials
+  - How-to guides
 
 ---
 Create PDF files is a very common operation. Modify them is a bit less common but, anyway, a very requested feature.

@@ -13,7 +13,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 451
 categories:
-  - News e approfondimenti
+  - Approfondimenti
 
 ---
 Le _Fake News_ non sono certo una novità degli ultimi tempi, esistono da molto prima dei social network, degli smartphone e di Internet.

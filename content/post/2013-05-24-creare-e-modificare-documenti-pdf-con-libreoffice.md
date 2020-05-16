@@ -9,7 +9,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 78
 categories:
-  - Tutorials
+  - How-to guides
 
 ---
 Creare file PDF è un'operazione piuttosto comune. Modificarli, invece, è un po' meno comune ma, comunque, una funzione molto richiesta.

@@ -16,7 +16,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 521
 categories:
-  - Tutorials
+  - How-to guides
 
 ---
 ## The problem

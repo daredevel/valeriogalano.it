@@ -8,7 +8,7 @@ tags:
   - Iubenda
   - Disqus
 categories:
-  - Tutorials
+  - How-to guides
 ---
 
 In recent days, I worked to convert my Wordpress-based personal website to a static blog created using Hugo framework. The result of this conversion is the blog you are reading at the moment. I made this decision because I was bored to continously update and take care of a complete Wordpress instance with the purpose of keep online a simple personal blog. But this is another story...

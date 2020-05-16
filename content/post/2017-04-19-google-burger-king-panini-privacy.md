@@ -13,7 +13,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 212
 categories:
-  - News e approfondimenti
+  - Approfondimenti
 
 ---
 Cosa posso avere mai in comune il gigante dei servizi online, Google, una delle più note catene di Fast Food, Burger King e la privacy delle nostre case?

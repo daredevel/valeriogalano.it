@@ -13,7 +13,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 279
 categories:
-  - News e approfondimenti
+  - Approfondimenti
 
 ---
 Ne abbiamo già parlato qualche settimana fa nell'articolo [Notizie false, conseguenze vere][1], ma **la situazione continua a peggiorare**.

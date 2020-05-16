@@ -13,7 +13,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 51
 categories:
-  - News e approfondimenti
+  - Approfondimenti
 
 ---
 Il 05 Aprile la nota piattaforma di video streaming, Netflix, ha [sostituito il propio sistema di votazione dei contenuti][1].

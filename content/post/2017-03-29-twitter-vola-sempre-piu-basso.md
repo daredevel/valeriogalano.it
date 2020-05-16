@@ -13,7 +13,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 49
 categories:
-  - News e approfondimenti
+  - News
 
 ---
 Non siamo di certo in un periodo d'oro per il social network piumato che nonstante la lieve crescita degli ultimi mesi, soffre ancora di una serie di limitazioni intrinseche che lo rendono poco florido sotto il profilo economico.

@@ -13,7 +13,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 58
 categories:
-  - News e approfondimenti
+  - Approfondimenti
 
 ---
 Tutti abbiamo, almeno una volta nella vita, ricercato qualcosa su Google, su Bing o su qualche altro motore.

@@ -7,7 +7,7 @@ tags:
   - Hugo
   - Github Actions
 categories:
-  - Tutorials
+  - How-to guides
 ---
 
 **UPDATE 2020-05-01: Some weeks after this post was published, SamKirkland released version 3 of FTP-Deploy-Action. So I updated code snippets. Old version of this post is available on [archive.is](https://archive.is/wip/LuO59 "archived version of Continous deploying via FTP of Hugo-based Website with Github Actions").**

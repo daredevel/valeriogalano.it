@@ -11,7 +11,7 @@ gallery_layout:
 trx_addons_post_views_count:
   - 407
 categories:
-  - News e approfondimenti
+  - Approfondimenti
 
 ---
 

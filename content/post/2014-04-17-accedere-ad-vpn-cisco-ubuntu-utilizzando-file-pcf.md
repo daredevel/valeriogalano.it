@@ -10,7 +10,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 124
 categories:
-  - Tutorials
+  - How-to guides
 
 ---
 La Virtual Private Network (VPN) è un ottimo modo per accedere alle risorse del tuo ufficio da casa o da qualsiasi altra rete in sicurezza e la VPN Cisco è una delle più efficienti e robuste.

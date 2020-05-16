@@ -12,7 +12,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 65
 categories:
-  - Tutorials
+  - How-to guides
 
 ---
 <a title="SparkleShare" href="http://sparkleshare.org/" target="_blank" rel="noopener noreferrer">SparkleShare</a> is a little Open Source software that allows users to share documents and files with version control and client side encryption system.

@@ -11,7 +11,7 @@ gallery_layout:
 trx_addons_post_views_count:
   - 101
 categories:
-  - News e approfondimenti
+  - Approfondimenti
 
 ---
 Il prossimo 14 Dicembre la _U.S. Federal Communications Commission_, ente che regolamenta il traffico Internet negli Stati Uniti, deciderà se abolire o meno il principio della _Neutralità della rete_ (conosciuto come Net Neutrality). La decisione non riguarda solo la regolamentazione negli USA ma, ovviamente, le ripercussioni saranno di livello globale.

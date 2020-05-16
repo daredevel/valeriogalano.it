@@ -12,9 +12,12 @@ dsq_thread_id:
   - 5887902816
 trx_addons_post_views_count:
   - 1694
+tags:
+  - PHP
+  - Zend Framework 3
 categories:
   - PHP
-  - Tutorials
+  - How-to guides
 
 ---
 Zend Service Manager component is Zend Framework's implementation of [service locator pattern][1]. This object is very usefull component for an application and is largely used in ZF applications.

@@ -12,7 +12,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 520
 categories:
-  - Tutorials
+  - How-to guides
 
 ---
 Virtual Private Network (VPN) is a great option to access to your office resources from home in secure way and Cisco VPN is one of more efficient and robust type of VPN.

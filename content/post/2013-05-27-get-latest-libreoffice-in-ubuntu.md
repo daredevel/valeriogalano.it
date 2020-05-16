@@ -11,7 +11,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 38
 categories:
-  - Tutorials
+  - How-to guides
 
 ---
 [LibreOffice][1] is actually the most famous Open Source Office Suite. Unfortunately, Ubuntu repositories often doesn't contains latest versions of it.

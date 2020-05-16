@@ -16,7 +16,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 33
 categories:
-  - News e approfondimenti
+  - Approfondimenti
 
 ---
 ## C'è contenuto e contenuto

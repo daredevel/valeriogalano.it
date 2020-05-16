@@ -12,9 +12,12 @@ dsq_thread_id:
   - 6088696573
 trx_addons_post_views_count:
   - 403
+tags:
+  - PHP
+  - Zend Framework 3
 categories:
   - PHP
-  - Tutorials
+  - How-to guides
 
 ---
 Normally in ZF3 MVC projects, each controller action matches one view and use it to render its output.

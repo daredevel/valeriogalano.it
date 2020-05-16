@@ -14,9 +14,12 @@ gallery_layout:
   - tiled
 trx_addons_post_views_count:
   - 93
+tags:
+  - PHP
+  - Zend Framework 2
 categories:
   - PHP
-  - Tutorials
+  - How-to guides
 
 ---
 Recently I started a new project based on [Zend Framework 2][3], using [Twitter Bootstrap][4] as CSS framework. Some days ago, new Bootstrap v3 was released and introduced a lot of changes and improvements. Because of ZF2 [Skeleton Application][5] comes out-of-box with Twitter Bootstap 2, I decided to setup the new project skeleton and update CSS framework to latest available release.

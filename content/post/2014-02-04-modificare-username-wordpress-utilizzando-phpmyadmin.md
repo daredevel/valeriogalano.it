@@ -16,7 +16,7 @@ gallery_layout:
 trx_addons_post_views_count:
   - 174
 categories:
-  - Tutorials
+  - How-to guides
 
 ---
 Come sicuramente saprete, WordPress non permette agli utenti di cambiare la propria username dal pannello di amministrazione. Tuttavia, avendo accesso al database, è possibile agirare facilmente tale limitazione.

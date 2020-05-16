@@ -14,7 +14,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 48
 categories:
-  - News e approfondimenti
+  - News
 
 ---
 E' previsto per questa settimana il rilascio della versione stabile di WordPress 3.9.

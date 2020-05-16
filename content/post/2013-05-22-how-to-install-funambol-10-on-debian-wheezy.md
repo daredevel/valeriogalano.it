@@ -13,7 +13,7 @@ gallery_layout:
 trx_addons_post_views_count:
   - 57
 categories:
-  - Tutorials
+  - How-to guides
 
 ---
 In this post we will cover how to install Funambol 10.0.3 on Debian Wheezy server.

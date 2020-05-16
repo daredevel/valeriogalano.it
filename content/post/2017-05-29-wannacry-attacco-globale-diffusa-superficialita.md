@@ -13,7 +13,7 @@ dsq_thread_id:
 trx_addons_post_views_count:
   - 275
 categories:
-  - News e approfondimenti
+  - Approfondimenti
 
 ---
 Sono trascorse ormai quasi 3 settimane da quando il _ransomware_ chiamato WannaCry ha iniziato la propria diffusione scatenando il panico e causando danni a livello mondiale.
