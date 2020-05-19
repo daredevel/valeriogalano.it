@@ -47,7 +47,7 @@ pygmentsUseClasses=true
   Favicon = "/img/logo-512x512.png"
   Mobile = "+393803529774"
   description = "Sviluppo software, back-end, api, bot, skills"
-  images = ["/img/profile.jpg"]
+  images = ["/img//logo-512x512.png"]
   title = "Valerio Galano"
 
 [markup]
