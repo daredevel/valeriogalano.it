@@ -2,7 +2,7 @@
 title: "Hello World: l'origine dell'esempio per eccellenza"
 author: Valerio Galano
 type: post
-date: 2020-05-19T07:00:00+01:00
+date: 2020-05-19T07:05:00+01:00
 tags: 
 categories:
   - Storia dell'informatica
