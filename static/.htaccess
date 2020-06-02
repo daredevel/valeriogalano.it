@@ -34,6 +34,7 @@ ErrorDocument 404 /404.html
 
 Redirect 301 /newsletter  https://daredevel.com/newsletter/?p=subscribe
 Redirect 301 /newsletter/ https://daredevel.com/newsletter/?p=subscribe
+Redirect 301 /twitch https://www.twitch.tv/valeriogalano
 
 Redirect 301 /31GPkdn https://amzn.to/2A0gfcg # Amazon home
 Redirect 301 /360s8Kx https://amzn.to/2WO4vm2 # Amazon wishlist
