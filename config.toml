@@ -33,11 +33,11 @@ pygmentsUseClasses=true
 
 [params]
   GithubID = "daredevel"
-#  TwitterID = "valeriogalano"
+  TwitterID = "valeriogalano"
   LinkedInID = "valeriogalano"
 #  FacebookID = "valerio.galano"
-  TelegramID = "daredevel"
-#  InstagramID = "valeriogalano"
+  TelegramID = "valeriogalano"
+  InstagramID = "valeriogalano"
   Name = "Valerio Galano"
   HeaderUsername = "valerio"
   HeaderHostname = "daredevel"
