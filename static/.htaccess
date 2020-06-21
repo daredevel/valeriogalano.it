@@ -36,6 +36,6 @@ Redirect 301 /newsletter  https://daredevel.com/newsletter/?p=subscribe
 Redirect 301 /newsletter/ https://daredevel.com/newsletter/?p=subscribe
 Redirect 301 /twitch https://www.twitch.tv/valeriogalano
 
-Redirect 301 /31GPkdn https://amzn.to/2A0gfcg # Amazon home
-Redirect 301 /360s8Kx https://amzn.to/2WO4vm2 # Amazon wishlist
-Redirect 301 /3cz67VI https://amzn.to/2XgF6Al # Web Design Adattivo
+Redirect 301 /31GPkdn https://amzn.to/314a1n8 # Amazon home
+Redirect 301 /360s8Kx https://amzn.to/2YhZAKJ # Amazon wishlist
+Redirect 301 /3cz67VI https://amzn.to/2YkyfHS # Web Design Adattivo
