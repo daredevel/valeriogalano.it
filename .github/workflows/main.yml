@@ -36,10 +36,10 @@ jobs:
     #    prerelease: false
     #    local_dir: public/
     
-    - uses: actions/upload-artifact@v2
-      with:
-        name: artifact-${{ github.ref }}
-        path: public/
+   # - uses: actions/upload-artifact@v2
+   #   with:
+   #     name: artifact-${{ github.ref }}
+   #     path: public/
          
     - name: Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
