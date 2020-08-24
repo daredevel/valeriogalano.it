@@ -1,4 +1,4 @@
-name: Publish
+name: Deploy
 
 on:
   push:
@@ -24,24 +24,7 @@ jobs:
 
     - name: Build
       run: hugo -D
-  
-    #- name: Create Release
-    #  id: create_release
-    #  uses: actions/create-release@v1
-    #  env:
-    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #  with:
-    #    tag_name: ${{ github.ref }}
-    #    release_name: Release ${{ github.ref }}
-    #    draft: false
-    #    prerelease: false
-    #    local_dir: public/
-    
-   # - uses: actions/upload-artifact@v2
-   #   with:
-   #     name: artifact-${{ github.ref }}
-   #     path: public/
-         
+
     - name: Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
