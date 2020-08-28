@@ -25,7 +25,7 @@ Let's see file content.
 
 docker-compose.yml:
 
-{{< highlight yml "linenos=true,hl_lines=2" >}}
+{{< highlight yml "linenos=true" >}}
 
 version: "3.7"
 services:
@@ -52,7 +52,7 @@ volumes:
 
 apache2/Dockerfile:
 
-{{< highlight Dockerfile "linenos=true,hl_lines=2" >}}
+{{< highlight Dockerfile "linenos=true" >}}
 
 FROM php:7.4-apache
 
