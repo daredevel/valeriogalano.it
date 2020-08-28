@@ -2,7 +2,7 @@
 title: "Quickly setup HTTPS on PHP Apache2 Docker container with self-signed SSL certificate"
 author: Valerio Galano
 type: post
-date: 2020-08-28T19:30:00+01:00
+date: 2020-08-31T05:00:00+01:00
 tags:
   - Docker
   - PHP
