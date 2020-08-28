@@ -9,7 +9,7 @@ tags:
   - SSL
   - HTTPS
 categories:
-  - Storia dell'informatica
+  - How-to guides
 ---
 
 I often use local [Docker] images for development reasons, and sometimes, I need to implement features that only works in HTTPS environment: i.e. [JWT Bearer token].
