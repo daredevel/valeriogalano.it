@@ -52,7 +52,7 @@ volumes:
 
 apache2/Dockerfile:
 
-{{< highlight Dockerfile "linenos=true" >}}
+{{< highlight dockerfile "linenos=true" >}}
 
 FROM php:7.4-apache
 
