@@ -19,7 +19,7 @@ disqusShortname = ""
     url = "https://valeriogalano.it/newsletter"
   [[menu.header]]
     name = "lezioni private"
-    weight = 3
+    weight = 4
     url = "http://bit.ly/vgDocety"
 #  [[menu.header]]
 #    parent = "blog"
@@ -48,7 +48,7 @@ disqusShortname = ""
   HeaderUsername = "valerio"
   HeaderHostname = "daredevel"
   Email = "v.galano@daredevel.com"
-  About = "Prometto che al più presto mi fermerò un attimo e mi prenderò qualche minuto per pensare ad una descrizione da mettere in questo box. Nel frattempo, in alto trovi i collegamenti al mio blog e al mio podcast. Buon divertimento!"
+  About = "Mi chiamo Valerio e dal 2006 lavoro con passione come programmatore e analista freelance. Mi occupo principalmente dello sviluppo di Web Application e siti Web. In alto trovi tutti i miei contatti ed i link ai progetti di divulgazione."
   ProfilePicture = "/img/profile.jpg"
   Favicon = "/img/logo-512x512.png"
   Mobile = "+393803529774"
