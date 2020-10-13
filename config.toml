@@ -1,9 +1,8 @@
 baseurl = "https://valeriogalano.it/"
 title = "Valerio Galano, programmatore e analista software"
-#theme = "ananke"
 theme = "hugo-theme-nix"
 languageCode = "it-it"
-disqusShortname = "daredevel"
+disqusShortname = ""
 pygmentsUseClasses=true
 
 [menu]
@@ -15,21 +14,21 @@ pygmentsUseClasses=true
 #    name = "about"
 #    weight = 1
 #    url = "/about"
-  [[menu.header]]
-    parent = "blog"
-    name = "posts"
-    weight = 1
-    url = "/daredevel"
-  [[menu.header]]
-    parent = "blog"
-    name = "categories"
-    weight = 2
-    url = "/categories"
-  [[menu.header]]
-    parent = "blog"
-    name = "tags"
-    weight = 3
-    url = "/tags"
+#  [[menu.header]]
+#    parent = "blog"
+#    name = "posts"
+#    weight = 1
+#    url = "/daredevel"
+#  [[menu.header]]
+#    parent = "blog"
+#    name = "categories"
+#    weight = 2
+#    url = "/categories"
+#  [[menu.header]]
+#    parent = "blog"
+#    name = "tags"
+#    weight = 3
+#    url = "/tags"
 
 [params]
   GithubID = "daredevel"
@@ -46,7 +45,7 @@ pygmentsUseClasses=true
   ProfilePicture = "/img/profile.jpg"
   Favicon = "/img/logo-512x512.png"
   Mobile = "+393803529774"
-  description = "Sviluppo software, back-end, api, bot, skills"
+  description = "Sviluppo software, back-end, api, chatbot, Alexa skills"
   images = ["/img/logo-200x200.png"]
   title = "Valerio Galano"
 
