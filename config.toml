@@ -3,17 +3,24 @@ title = "Valerio Galano, programmatore e analista software"
 theme = "hugo-theme-nix"
 languageCode = "it-it"
 disqusShortname = ""
-pygmentsUseClasses=true
 
 [menu]
-#  [[menu.header]]
-#    name = "blog"
-#    weight = 1
-#    url = "/posts"
-#  [[menu.header]]
-#    name = "about"
-#    weight = 1
-#    url = "/about"
+  [[menu.header]]
+    name = "daredevel (blog)"
+    weight = 1
+    url = "https://daredevel.com"
+  [[menu.header]]
+    name = "pensieri in codice (podcast)"
+    weight = 2
+    url = "https://pensieriincodice.it"
+  [[menu.header]]
+    name = "newsletter"
+    weight = 3
+    url = "https://valeriogalano.it/newsletter"
+  [[menu.header]]
+    name = "lezioni private"
+    weight = 3
+    url = "http://bit.ly/vgDocety"
 #  [[menu.header]]
 #    parent = "blog"
 #    name = "posts"
@@ -51,7 +58,7 @@ pygmentsUseClasses=true
 
 [privacy]
   [privacy.disqus]
-    disable = false
+    disable = true
   [privacy.googleAnalytics]
     anonymizeIP = true
     disable = true
@@ -61,7 +68,7 @@ pygmentsUseClasses=true
     disable = true
     simple = true
   [privacy.twitter]
-    disable = false
+    disable = true
     enableDNT = true
     simple = true
     disableInlineCSS = true
@@ -69,5 +76,5 @@ pygmentsUseClasses=true
     disable = true
     simple = true
   [privacy.youtube]
-    disable = false
+    disable = true
     privacyEnhanced = true
