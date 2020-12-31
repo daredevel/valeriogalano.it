@@ -1,6 +1,6 @@
 # Netlify redirects
-/newsletter  https://daredevel.com/newsletter/?p=subscribe
-/newsletter/ https://daredevel.com/newsletter/?p=subscribe
+/newsletter  https://valeriogalano.substack.com
+/newsletter/ https://valeriogalano.substack.com
 /twitch      https://twitch.tv/valeriogalano
 /twitter     https://twitter.com/valeriogalano
 /instagram   https://instagram.com/valeriogalano
