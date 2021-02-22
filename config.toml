@@ -18,8 +18,12 @@ disqusShortname = ""
     weight = 3
     url = "https://valeriogalano.it/newsletter"
   [[menu.header]]
-    name = "lezioni private"
+    name = "consulenza"
     weight = 4
+    url = "/consulenza"
+  [[menu.header]]
+    name = "lezioni private"
+    weight = 5
     url = "http://bit.ly/vgDocety"
 #  [[menu.header]]
 #    parent = "blog"
