@@ -6,11 +6,11 @@ disqusShortname = ""
 
 [menu]
   [[menu.header]]
-    name = "daredevel (blog)"
+    name = "blog"
     weight = 1
     url = "https://daredevel.com"
   [[menu.header]]
-    name = "pensieri in codice (podcast)"
+    name = "podcast"
     weight = 2
     url = "https://pensieriincodice.it"
   [[menu.header]]
@@ -52,7 +52,7 @@ disqusShortname = ""
   HeaderUsername = "valerio"
   HeaderHostname = "daredevel"
   Email = "v.galano@daredevel.com"
-  About = "Mi chiamo Valerio e dal 2006 lavoro con passione come programmatore e analista freelance. Mi occupo principalmente dello sviluppo di Web Application e siti Web. In alto trovi tutti i miei contatti ed i link ai progetti di divulgazione."
+  About = "Mi chiamo Valerio e dal 2006 lavoro con passione come programmatore e analista freelance. Mi occupo principalmente di programmazione in PHP e sviluppo di Web Application e siti Web. In alto trovi tutti i miei contatti ed i link ai progetti di divulgazione."
   ProfilePicture = "/img/profile.jpg"
   Favicon = "/img/logo-512x512.png"
   Mobile = "+393803529774"
