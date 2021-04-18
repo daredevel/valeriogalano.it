@@ -22,7 +22,7 @@ disqusShortname = ""
     weight = 4
     url = "/consulenza"
   [[menu.header]]
-    name = "lezioni private"
+    name = "lezioni"
     weight = 5
     url = "http://bit.ly/vgDocety"
 #  [[menu.header]]
