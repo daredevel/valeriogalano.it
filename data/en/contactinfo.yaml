@@ -1,10 +1,10 @@
 #contactformaction: 'post-action'
 
 address:
- - line: '[Daredevel - Il blog di Valerio Galano](https://daredevel.com)'
- - line: '[Pensieri in codice - podcast](https://pensieriincodice.it)'
- - line: '[La newsletter](https://valeriogalano.it/newsletter)'
- - line: '[Docety - Lezioni private](http://bit.ly/vgDocety)'
+ - line: '[Daredevel - Il blog](https://daredevel.com)'
+ - line: '[Pensieri in codice - Il podcast](https://pensieriincodice.it)'
+ - line: '[Substack - La newsletter](https://valeriogalano.it/newsletter)'
+ - line: '[Docety - Le lezioni private](https://valeriogalano.it/docety)'
 
 #phone: '(800) 000-0000'
 

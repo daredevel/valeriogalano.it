@@ -8,6 +8,14 @@ disableKinds = ["taxonomy", "taxonomyTerm", "section"]
 [params]
   Favicon = "/img/logo-512x512.png"
 
+# Below parameters can be set to override default post settings
+[params.posts]
+#     folderName = "post"
+#     pageSize = "6"
+#     featuredPost = true
+#     paginationPages = 2
+#     showFirstLast = false
+
 [privacy]
   [privacy.disqus]
     disable = true
