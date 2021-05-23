@@ -1,9 +1,9 @@
 ---
-title: Consulenza professionale
+title: Consulenza
 author: Valerio Galano
 type: page
-date: 2020-05-19T00:00:00+01:00
-
+description: Se sei in cerca di una consulenza professionale su sviluppo software o realizzazione di siti Web?
+disableComments: true
 ---
 
 La programmazione è sia la mia passione che il mio lavoro: mi occupo di **analisi, progettazione e sviluppo software** dal 2006. Fornisco consulenza a livello professionale sia ad aziende che a privati.

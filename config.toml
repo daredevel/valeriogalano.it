@@ -1,6 +1,6 @@
 baseurl = "https://valeriogalano.it/"
-title = "Valerio Galano, programmatore e analista software"
-theme = "hugo-theme-nix"
+title = "Valerio Galano"
+theme = "hugo-theme-massively"
 languageCode = "it-it"
 disqusShortname = ""
 
