@@ -2,7 +2,7 @@
 title: Consulenza
 author: Valerio Galano
 type: page
-description: Se sei in cerca di una consulenza professionale su sviluppo software o realizzazione di siti Web?
+description: Sei in cerca di una consulenza professionale su sviluppo software o realizzazione di siti Web?
 disableComments: true
 ---
 

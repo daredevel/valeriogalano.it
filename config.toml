@@ -1,64 +1,12 @@
 baseurl = "https://valeriogalano.it/"
-title = "Valerio Galano"
+title = "Valerio Galano, sviluppo software e Web"
 theme = "hugo-theme-massively"
 languageCode = "it-it"
 disqusShortname = ""
-
-[menu]
-  [[menu.header]]
-    name = "blog"
-    weight = 1
-    url = "https://daredevel.com"
-  [[menu.header]]
-    name = "podcast"
-    weight = 2
-    url = "https://pensieriincodice.it"
-  [[menu.header]]
-    name = "newsletter"
-    weight = 3
-    url = "https://valeriogalano.it/newsletter"
-  [[menu.header]]
-    name = "consulenza"
-    weight = 4
-    url = "/consulenza"
-  [[menu.header]]
-    name = "lezioni"
-    weight = 5
-    url = "http://bit.ly/vgDocety"
-#  [[menu.header]]
-#    parent = "blog"
-#    name = "posts"
-#    weight = 1
-#    url = "/daredevel"
-#  [[menu.header]]
-#    parent = "blog"
-#    name = "categories"
-#    weight = 2
-#    url = "/categories"
-#  [[menu.header]]
-#    parent = "blog"
-#    name = "tags"
-#    weight = 3
-#    url = "/tags"
+disableKinds = ["taxonomy", "taxonomyTerm", "section"]
 
 [params]
-  GithubID = "daredevel"
-  TwitterID = "valeriogalano"
-  LinkedInID = "valeriogalano"
-#  FacebookID = "valerio.galano"
-  TelegramID = "valeriogalano"
-  InstagramID = "valeriogalano"
-  Name = "Valerio Galano"
-  HeaderUsername = "valerio"
-  HeaderHostname = "daredevel"
-  Email = "v.galano@daredevel.com"
-  About = "Mi chiamo Valerio e dal 2006 lavoro con passione come programmatore e analista freelance. Mi occupo principalmente di programmazione in PHP e sviluppo di Web Application e siti Web. In alto trovi tutti i miei contatti ed i link ai progetti di divulgazione."
-  ProfilePicture = "/img/profile.jpg"
   Favicon = "/img/logo-512x512.png"
-#  Mobile = "+393803529774"
-  description = "Sviluppo software, back-end, api, chatbot, Alexa skills"
-  images = ["/img/logo-200x200.png"]
-  title = "Valerio Galano"
 
 [privacy]
   [privacy.disqus]
