@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: valeriogalano.it
+Token: 2670e795371377c5d7ac31dc884520792957c89de9156dff1a48695bba619a5e
