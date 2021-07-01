@@ -35,5 +35,5 @@ Il software, però, ha il vantaggio di essere **personalizzabile**.
 Se hai bisogno di modificare il tuo software o il tuo sito Web, forse ti può interessare una consulenza professionale personalizzata.
 
 {{< rawhtml >}}
-    <p><a class="button primary fit icon fa-pencil" href="/consulenza">Ok, mi interessa una cosulenza</a></p>
+    <p><a class="button primary fit icon fa-pencil" href="/consulenza">Ok, mi interessa una consulenza</a></p>
 {{< /rawhtml >}}

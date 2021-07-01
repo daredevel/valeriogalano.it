@@ -16,6 +16,6 @@ Le applicazioni possibili sul Web sono ormai di ogni tipo ed hanno il vantaggio 
 **Gestionali o portali su misura**, **Content Management System (CMS)**, **Web application**, **Web service**, **API**, **Chatbot e Skill per Alexa**, **Plugin per Wordpress**, sono solo alcuni esempi di software per il Web che possiamo progettare e realizzare insieme.
 
 {{< rawhtml >}}
-<p><a class="button primary fit icon fa-pencil" href="/consulenza">Ok, mi interessa una cosulenza</a></p>
+<p><a class="button primary fit icon fa-pencil" href="/consulenza">Ok, mi interessa una consulenza</a></p>
 {{< /rawhtml >}}
 

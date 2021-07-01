@@ -20,5 +20,5 @@ La mia tariffa oraria è di **€50 + oneri fiscali** per consulenze saltuarie. 
 **Il lavoro in nero non è contemplato!**
 
 {{< rawhtml >}}
-  <p><a class="button primary fit icon fa-pencil" href="mailto:v.galano@daredevel.com">Sei interessato ad una consulenza?</a></p>
+  <p><a class="button primary fit icon fa-pencil" href="mailto:v.galano@daredevel.com">Voglio una consulenza</a></p>
 {{< /rawhtml >}}

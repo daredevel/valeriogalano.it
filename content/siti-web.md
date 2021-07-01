@@ -17,5 +17,5 @@ A seconda della tipologia di sito Web che meglio risponde alle tue esigenze, ti 
 Bilanciando necessità e costi, possiamo progettare e realizzare la soluzione che meglio si addice al tuo business.
 
 {{< rawhtml >}}
-<p><a class="button primary fit icon fa-pencil" href="/consulenza">Ok, mi interessa una cosulenza</a></p>
+<p><a class="button primary fit icon fa-pencil" href="/consulenza">Ok, mi interessa una consulenza</a></p>
 {{< /rawhtml >}}
