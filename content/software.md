@@ -1,5 +1,5 @@
 ---
-title: Soluzioni software
+title: Soluzioni software per il Web
 author: Valerio Galano
 type: page
 description: Hai bisogno di un software su misura? Posso progettare e realizzare la soluzione Web più adatta alle tue esigenze.
