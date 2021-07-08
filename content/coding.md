@@ -39,7 +39,7 @@ In entrambi i casi, **la prima mezz'ora sarà gratuita e volta ad organizzare le
 	</div>
 	<div class="col-6 col-12-small">
 		<ul class="actions stacked">
-			<li><a class="button primary fit icon fa-pencil" href="mailto:v.galano@daredevel.com">Ti scrivo via email per essere ricontattato</a></li>
+			<li><a class="button primary fit icon fa-pencil" href="mailto:v.galano@daredevel.com">Ti scrivo via email. Ricontattami</a></li>
 		</ul>
 	</div>
 </div>
