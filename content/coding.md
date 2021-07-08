@@ -1,5 +1,5 @@
 ---
-title: Supporto al coding scolastico
+title: Supporto al coding
 author: Valerio Galano
 type: page
 description: Lezioni personalizzate per docenti e studenti su coding, supporto per la progettazione delle attività scolastiche ed extrascolastiche, preparazione concorsi.
@@ -16,8 +16,6 @@ In questo ambito, si colloca l'**educazione digitale**, che nella scuola italian
 Imparare come funziona il software, studiando i meccanismi con i quali viene realizzato, permette ai ragazzi, da un lato di allenare la mente a ragionare in modo creativo e ben strutturato, pianificando le opportune strategie risolutive, e, dall'altro, di abituarsi ad interagire con le macchine e gli algoritmi che permeano (e pervaderanno sempre più) la nostra vita quotidiana.
 
 In questo viaggio verso la conoscenza, compito dei docenti è quello di informarsi in prima persona per acquisire una consapevolezza profonda ed effettiva di un fenomeno che non è figlio del loro tempo e, una volta dominato, trasmetterlo ai ragazzi.
-
-E questo non è certamente un compito banale.
 
 Come programmatore con un'esperienza di oltre 20 anni, dunque, ho deciso di voler essere parte attiva in questo processo di alfabetizzazione e diffusione dell'educazione digitale mettendo a disposizione di docenti e studenti le mie conoscenze e competenze attraverso  un servizio di lezioni personali incentrate su:
 
