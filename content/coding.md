@@ -13,13 +13,13 @@ Imparare a muoversi online ed utilizzare consapevolmente gli strumenti digitali 
 
 In questo ambito, si colloca l'**educazione digitale**, che nella scuola italiana passa anche attraverso il cosiddetto **coding** e lo sviluppo del **pensiero computazionale** (ossia il processo mentale che consente di risolvere problemi di varia natura seguendo metodi e strumenti specifici).
 
-Imparare come funziona il software, studiando i meccanismi con i quali viene realizzato, permette ai ragazzi, da un lato di formare e allenare la mente a ragionare in modo creativo e ben strutturato, pianificando le opportune strategie risolutive, e, dall'altro, di abituarsi ad interagire con le macchine e gli algoritmi che permeano (e pervaderanno sempre più) la nostra vita quotidiana.
+Imparare come funziona il software, studiando i meccanismi con i quali viene realizzato, permette ai ragazzi, da un lato di allenare la mente a ragionare in modo creativo e ben strutturato, pianificando le opportune strategie risolutive, e, dall'altro, di abituarsi ad interagire con le macchine e gli algoritmi che permeano (e pervaderanno sempre più) la nostra vita quotidiana.
 
 In questo viaggio verso la conoscenza, compito dei docenti è quello di informarsi in prima persona per acquisire una consapevolezza profonda ed effettiva di un fenomeno che non è figlio del loro tempo e, una volta dominato, trasmetterlo ai ragazzi.
 
 E questo non è certamente un compito banale.
 
-Come programmatore con un'esperienza di oltre 20 anni, dunque, ho deciso di voler essere parte attiva in questo processo di alfabetizzazione e diffusione dell'educazione digitale mettendo a disposizione di dicenti e studenti le mie conoscenze e competenze attraverso  un servizio di lezioni personali incentrate su:
+Come programmatore con un'esperienza di oltre 20 anni, dunque, ho deciso di voler essere parte attiva in questo processo di alfabetizzazione e diffusione dell'educazione digitale mettendo a disposizione di docenti e studenti le mie conoscenze e competenze attraverso  un servizio di lezioni personali incentrate su:
 
  * Problem Solving
  * Coding a vari livelli (scuola primaria, secondaria, superiore)
