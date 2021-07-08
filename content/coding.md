@@ -2,24 +2,24 @@
 title: Supporto al coding scolastico
 author: Valerio Galano
 type: page
-description: Lezioni frontali per docenti e studenti su coding, progettazione delle attività e preparazione concorsi.
+description: Lezioni personalizzate per docenti e studenti su coding, supporto per la progettazione delle attività scolastiche ed extrascolastiche, preparazione concorsi.
 disableComments: true
 weight: 70
 ---
 
-Nel mondo di oggi, gran parte della nostra vita svolge nel mondo digitale (o come direbbe Stefano Qunitarelli: immateriale).
+Al giorno d'oggi, gran parte della nostra si vita svolge nel mondo digitale (o come direbbe Stefano Qunitarelli: immateriale).
 
-Imparare a muoversi online ed utilizzare gli strumenti digitali che la società ci offre, significa, non solo essere al passo con i tempi, ma anche ottenere vantaggi in termini di benessere e risparmiare tempo e soldi.
+Imparare a muoversi online ed utilizzare consapevolmente gli strumenti digitali che la società ci offre, significa, non solo essere al passo con i tempi, ma anche ottenere vantaggi in termini di benessere e risparmiare tempo e soldi.
 
-In questo ambito, si colloca l'educazione digitale, che nella scuola italiana passa anche attraverso il cosiddetto coding.
+In questo ambito, si colloca l'**educazione digitale**, che nella scuola italiana passa anche attraverso il cosiddetto **coding** e lo sviluppo del **pensiero computazionale** (ossia il processo mentale che consente di risolvere problemi di varia natura seguendo metodi e strumenti specifici).
 
-Per i ragazzi, imparare come funziona il software, studiando i meccanismi con i quali viene realizzato, significa, da un lato formare e allenare la mente a ragionare in modo creativo e ben strutturato, e dall'altro abituarsi ad interagire con le macchine e gli algoritmi che permeano (e pervaderanno sempre più) la nostra vita quotidiana.
+Imparare come funziona il software, studiando i meccanismi con i quali viene realizzato, permette ai ragazzi, da un lato di formare e allenare la mente a ragionare in modo creativo e ben strutturato, pianificando le opportune strategie risolutive, e, dall'altro, di abituarsi ad interagire con le macchine e gli algoritmi che permeano (e pervaderanno sempre più) la nostra vita quotidiana.
 
-In questo viaggio verso la conoscenza, compito dei docenti è quello di imparare essi stessi a capire un fenomeno che non è figlio dei loro tempi e, una volta dominato, trasmetterlo ai ragazzi.
+In questo viaggio verso la conoscenza, compito dei docenti è quello di informarsi in prima persona per acquisire una consapevolezza profonda ed effettiva di un fenomeno che non è figlio del loro tempo e, una volta dominato, trasmetterlo ai ragazzi.
 
 E questo non è certamente un compito banale.
 
-Come programmatore da oltre 20 anni, dunque, ho deciso di prendere parte a questo processo offrendo, sia a docenti che a studenti, un servizio di lezioni frontali personali riguardo:
+Come programmatore con un'esperienza di oltre 20 anni, dunque, ho deciso di voler essere parte attiva in questo processo di alfabetizzazione e diffusione dell'educazione digitale mettendo a disposizione di dicenti e studenti le mie conoscenze e competenze attraverso  un servizio di lezioni personali incentrate su:
 
  * Problem Solving
  * Coding a vari livelli (scuola primaria, secondaria, superiore)
