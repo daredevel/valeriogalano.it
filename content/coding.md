@@ -24,7 +24,7 @@ Come programmatore con un'esperienza di oltre 20 anni, dunque, ho deciso di vole
  * Supporto nell'integrazione dell'informatica nella programmazione didattica
  * Preparazione ai concorsi pubblici per l'area informatica
 
-Se vuoi parlarne, **puoi contattarmi via email o prenotare direttamente una lezione conoscitiva sulla piattaforma Docety**.
+Se vuoi parlarne, **puoi contattarmi via email ( v.galano@daredevel.com ) o prenotare direttamente una lezione conoscitiva sulla piattaforma Docety**.
 
 In entrambi i casi, **la prima mezz'ora sarà gratuita e volta ad organizzare le lezioni**.
 
