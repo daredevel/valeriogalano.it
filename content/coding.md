@@ -7,7 +7,7 @@ disableComments: true
 weight: 70
 ---
 
-Al giorno d'oggi, gran parte della nostra si vita svolge nel mondo digitale (o come direbbe Stefano Qunitarelli: immateriale).
+Al giorno d'oggi, gran parte della nostra si vita svolge nel mondo immateriale.
 
 Imparare a muoversi online ed utilizzare consapevolmente gli strumenti digitali che la società ci offre, significa, non solo essere al passo con i tempi, ma anche ottenere vantaggi in termini di benessere e risparmiare tempo e soldi.
 
