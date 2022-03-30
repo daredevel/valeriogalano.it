@@ -4,7 +4,7 @@ author: Valerio Galano
 type: page
 description: Lezioni personalizzate per docenti e studenti su coding, supporto per la progettazione delle attività scolastiche ed extrascolastiche, preparazione concorsi.
 disableComments: true
-weight: 70
+weight: 60
 ---
 
 Al giorno d'oggi, gran parte della nostra si vita svolge nel mondo immateriale.

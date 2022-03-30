@@ -4,7 +4,7 @@ author: Valerio Galano
 type: page
 description: Sei in cerca di una consulenza professionale? 
 disableComments: true
-weight: 60
+weight: 70
 ---
 
 La programmazione è sia la mia passione che il mio lavoro: mi occupo di **analisi, progettazione e sviluppo software** dal 2006. Fornisco consulenza a livello professionale sia ad aziende che a privati.
