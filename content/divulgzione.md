@@ -17,7 +17,7 @@ Un podcast nel quale racconto gli argomenti che suscitano il mio interesse e con
 <div class="row">
 	<div class="col-12 col-12-small">
 		<ul class="actions stacked">
-			<li><a class="button primary fit icon fa-calendar" href="https://pensieriincodice.it">Voglio visitare il sito di Pensieri in codice</a></li>
+			<li><a class="button primary fit icon fa-calendar" href="https://pensieriincodice.it">Voglio ascoltare Pensieri in codice</a></li>
 		</ul>
 	</div>
 </div>
