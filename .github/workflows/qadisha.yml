@@ -35,7 +35,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftp.pensieriincodice.it
+          server: pensieriincodice.it
           username: website@valeriogalano.it
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public/
