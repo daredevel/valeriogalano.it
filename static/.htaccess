@@ -9,6 +9,11 @@ Redirect 301 /linkedin    https://linkedin.com/in/valeriogalano
 Redirect 301 /telegram    https://t.me/valeriogalano
 Redirect 301 /docety      https://www.docety.com/coachs/5222/dettagli/Galano+Valerio
 
-Redirect 301 /31GPkdn https://amzn.to/314a1n8 # Amazon home
-Redirect 301 /360s8Kx https://amzn.to/2YhZAKJ # Amazon wishlist
-Redirect 301 /3cz67VI https://amzn.to/2YkyfHS # Web Design Adattivo
+# Amazon home
+Redirect 301 /31GPkdn https://amzn.to/314a1n8
+
+# Amazon wishlist
+Redirect 301 /360s8Kx https://amzn.to/2YhZAKJ
+
+# Web Design Adattivo
+Redirect 301 /3cz67VI https://amzn.to/2YkyfHS
