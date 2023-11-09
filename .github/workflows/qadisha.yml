@@ -38,6 +38,5 @@ jobs:
           server: ftp.pensieriincodice.it
           username: website@valeriogalano.it
           password: ${{ secrets.FTP_PASSWORD }}
-          LOCAL_DIR: ./public/
-          REMOTE_DIR: /
-          ARGS: --delete # will delete files on the server if you've deleted them in git
+          local-dir: ./public/
+          server-dir: /
