@@ -37,6 +37,6 @@ jobs:
         with:
           server: ftp.pensieriincodice.it
           username: website@valeriogalano.it
-          password: ${{ q.FTP_PASSWORD }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public/
           server-dir: /
