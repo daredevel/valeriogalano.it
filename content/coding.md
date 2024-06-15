@@ -24,17 +24,12 @@ Come programmatore con un'esperienza di oltre 20 anni, dunque, ho deciso di vole
  * Supporto nell'integrazione dell'informatica nella programmazione didattica
  * Preparazione ai concorsi pubblici per l'area informatica
 
-Se vuoi parlarne, **puoi contattarmi via email ( v.galano@daredevel.com ) o prenotare direttamente una lezione conoscitiva sulla piattaforma Docety**.
+Se vuoi parlarne, **puoi contattarmi via email**.
 
-In entrambi i casi, **la prima mezz'ora sarà gratuita e volta ad organizzare le lezioni**.
+**La prima mezz'ora sarà gratuita e volta ad organizzare le lezioni**.
 
 {{< rawhtml >}}
 <div class="row">
-	<div class="col-6 col-12-small">
-		<ul class="actions stacked">
-			<li><a class="button primary fit icon fa-calendar" href="/docety">Prenoto una lezione su Docety</a></li>
-		</ul>
-	</div>
 	<div class="col-6 col-12-small">
 		<ul class="actions stacked">
 			<li><a class="button primary fit icon fa-pencil" href="mailto:v.galano@daredevel.com">Ti scrivo via email. Ricontattami</a></li>
